@@ -1,0 +1,229 @@
+/************* Custom Properties ***********/
+:root {
+  --primary-color: #b40414;
+  --content-color: #222031;
+  --content-secondary-color: #fff;
+  --emphasis-color: #530412;
+  --background-color: #f0f4f7;
+  --btn-primary-color: #ffc600;
+  --btn-text-color: #3d4d4d;
+  --btn-secondary-color: #568067;
+  --btn-tertiary-color: #4c87c2;
+}
+
+/************ Reset Styles **************/
+
+body {
+  font-family: "Museo Sans 500";
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  font-size: 30px;
+  padding: 0;
+  color: var(--content-color);
+}
+
+::-webkit-scrollbar {
+  background-color: #afaeae;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--emphasis-color);
+  border-radius: 10px;
+  width: 30px;
+}
+
+.fa-heart {
+  color: #c54646;
+  font-size: 26px;
+}
+
+.fa-pepper-hot {
+  color: #8b1a10;
+}
+
+a {
+  text-decoration: none;
+  color: #222031;
+}
+
+header.carousel {
+  margin-top: 100px;
+}
+
+/************ Bootstrap Styles ***********/
+
+/************ My Styles ****************/
+.navbar-brand img {
+  width: 80px;
+}
+
+nav.navbar {
+  background-color: var(--content-secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 6px 10px 0px rgba(166, 133, 133, 0.75);
+  -webkit-box-shadow: 0px 6px 10px 0px rgba(166, 133, 133, 0.75);
+  -moz-box-shadow: 0px 6px 10px 0px rgba(166, 133, 133, 0.75);
+}
+
+span.text-brand {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #b40414;
+}
+
+a.nav-link {
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+  padding-bottom: 0;
+}
+
+a.nav-link:hover {
+  color: var(--emphasis-color);
+  border-bottom: 2px solid var(--emphasis-color);
+}
+
+.best-selling {
+  border-bottom: 4px solid #ced1d4;
+  width: 100%;
+  font-weight: 700;
+}
+
+.main-products-container {
+  position: relative;
+}
+
+.pro-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3% 6%;
+  gap: 20px;
+  z-index: 100;
+}
+
+.pro {
+  max-width: 220px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fav-icon {
+  background: #ffe6e6;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hot-scale {
+  position: absolute;
+  right: 0;
+  bottom: 40%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.cart-button {
+  border: none;
+  text-decoration: none;
+  background-color: var(--btn-primary-color);
+  text-transform: uppercase;
+  padding: 10px 35px;
+  max-width: 80%;
+  border-radius: 28px;
+  font-family: "Avenir Next Rounded Std";
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-shadow: 0px 7px 5px -1px rgba(194, 144, 144, 0.75);
+  -webkit-box-shadow: 0px 7px 5px -1px rgba(194, 144, 144, 0.75);
+  -moz-box-shadow: 0px 7px 5px -1px rgba(194, 144, 144, 0.75);
+}
+
+.item-title {
+  font-size: 15px;
+}
+
+.talavera-background {
+  margin-top: 3%;
+  position: absolute;
+  top: 10%;
+  mix-blend-mode: screen;
+  border: 1px solid #413457;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: url(../assets/img/home-page/Talavera-design.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 99vw;
+  height: 300px;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 330px) and (max-width: 576px) {
+  span.text-brand {
+    top: 17%;
+  }
+
+  .pro-container {
+    grid-template-columns: 1fr;
+  }
+
+  .talavera-background {
+    background: url(../assets/img/home-page/Talavera-design-short.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 98vw;
+    height: 150vh;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 992px) {
+  .pro-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .talavera-background {
+    background: url(../assets/img/home-page/Talavera-design-short.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 98vw;
+    height: 150vh;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .pro-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
