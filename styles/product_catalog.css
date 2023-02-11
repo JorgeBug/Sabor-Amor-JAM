@@ -6,13 +6,9 @@
 
 .nav-item{
     font-size: 25px;
+    font-family: 'Museo Sans 100';
 }
 
-#selected{
-    color: #B40414;
-    border-bottom: 4px solid #B40414;
-
-}
 
 /* catalog styles */
 main,.card{
@@ -27,6 +23,7 @@ main,.card{
     padding-top: 25px;
     border-bottom: 4px solid #ced1d4;
     width: 70%;
+    font-family: 'Museo Sans 100';
 }
 
 .btn-primary{
@@ -38,3 +35,29 @@ main,.card{
     background-color: #FFC600;
 }
 
+#selected{
+    color: #B40414;
+    border-bottom: 4px solid #B40414;
+}
+
+/* Icons */
+.fa-pepper-hot,.fa-heart{
+    color: #B40414;
+    position: absolute;
+    font-size: 40px;
+}
+
+.fa-pepper-hot{
+    right: 20%;
+    bottom: 80%;
+}
+
+.fa-heart{
+    color:blue;
+    right: 0;
+}
+
+/* card images  */
+.image-container{
+    position: relative;
+}

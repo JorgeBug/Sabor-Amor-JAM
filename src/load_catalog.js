@@ -32,9 +32,12 @@ const createCardString = (imgRoute, cardTitle) => {
   return `
   <div class="col-sm">
   <div class="card text-center border-0" style="width: 18rem">
-    <a href="#">
-      <img src=${imgRoute} class="card-img-top" alt="..." />
-    </a>
+      <div class="image-container">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-pepper-hot"></i>
+        <a href="#"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
+      </div>
+  </div>
     <div class="card-body">
       <h5 class="card-title">${cardTitle}</h5>
       <h5 class="card-text">$70.00</h5>
