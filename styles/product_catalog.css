@@ -1,0 +1,40 @@
+/* navBar styles */
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-item{
+    font-size: 25px;
+}
+
+#selected{
+    color: #B40414;
+    border-bottom: 4px solid #B40414;
+
+}
+
+/* catalog styles */
+main,.card{
+    background-color: #E5E9EC;
+}
+
+.card{
+    margin-top: 50px;
+}
+
+.section-title{
+    padding-top: 25px;
+    border-bottom: 4px solid #ced1d4;
+    width: 70%;
+}
+
+.btn-primary{
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 28px;
+    color: #3D4D4D;
+    background-color: #FFC600;
+}
+
