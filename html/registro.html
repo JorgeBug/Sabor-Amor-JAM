@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro</title>
+
+    <!-- Boostrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Other Dependencies  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Icon  -->
+    <link rel="icon" type="image/x-icon" href="/assets/saboramor.jpg" />
+
+    <!-- Custom Styles  -->
+    <link rel="stylesheet" href="../css/registro.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid pt-5 mt-5">
+      <div
+        class="main-container row justify-content-around sm-justify-content-center"
+      >
+        <div class="col-lg-4 col-md-6 col-sm-8 col-10 left-main-container">
+          <h1>Registrarse</h1>
+          <p>Bienvenido a probar nuestras delicias!</p>
+          <form class="form" id="form">
+            <div class="form-container">
+              <label class="rounded-pill w-100"
+                >Nombre completo <span class="required">*</span>:</label
+              >
+              <input type="text" id="name" placeholder="John Doe" />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <small>Error</small>
+            </div>
+            <div class="form-container">
+              <label class="rounded-pill w-100"
+                >Numero de Telefono <span class="required">*</span>:</label
+              >
+              <input type="tel" id="phone-num" placeholder="55 455 232 23" />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <small>Error</small>
+            </div>
+            <div class="form-container">
+              <label class="rounded-pill w-100"
+                >Email <span class="required">*</span>:</label
+              >
+              <input type="text" id="email" placeholder="johndoe15@email.com" />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <small>Error</small>
+            </div>
+            <div class="form-container">
+              <label class="rounded-pill w-100"
+                >Contraseña <span class="required">*</span>:</label
+              >
+              <input type="password" id="password" placeholder="*******" />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <small>Error</small>
+            </div>
+            <div class="form-container">
+              <label class="rounded-pill w-100"
+                >Confirmar contraseña <span class="required">*</span>:</label
+              >
+              <input
+                type="password"
+                id="check-password"
+                placeholder="*******"
+              />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <small>Error</small>
+            </div>
+
+            <div class="accept-conditions">
+              <input type="checkbox" id="active" required />
+              <label for="active">
+                Acepto <a class="link" href="#"> Terminos & Condiciones </a>
+              </label>
+            </div>
+
+            <button
+              id="saveBtn"
+              type="submit"
+              class="btn btn-primary btn-lg rounded-pill col-2 mx-auto"
+            >
+              Registrar
+            </button>
+            <p>
+              ¿Ya tienes una cuenta?
+              <a class="link" href="../html/inicia-sesion">Inicia sesión</a>
+            </p>
+          </form>
+        </div>
+
+        <div
+          class="img-container col-lg-5 col-sm-0 d-flex justify-content-center"
+        >
+          <img
+            src="../assets/img/signup-signin/register-img.jpg"
+            width="400px"
+            alt="ImagenSalsas"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="talavera-design"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../src/navbar.js"></script>
+    <script src="../src/usuarios.js"></script>
+    <script src="../src/registro.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,400&family=Roboto:wght@100;300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  padding-top: 4%;
+}
+
+.left-main-container {
+  padding: 0 100px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 5%;
+}
+
+.left-main-container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 33px;
+  padding-bottom: 10px;
+}
+
+.left-main-container p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #595959;
+}
+
+span.required {
+  color: #b40414;
+}
+
+.form-container {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2.5px solid #e7e7e7;
+  border-radius: 28.5px;
+  width: 384px;
+  height: 55px;
+  margin-bottom: 32.5px;
+  padding-left: 30px;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+}
+
+.form-container i {
+  position: absolute;
+  top: 42px;
+  right: 0px;
+  visibility: hidden;
+}
+
+.form-container small {
+  position: absolute;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+}
+
+.form-container.success input {
+  border-color: #2eec71;
+}
+
+.form-container.success i.fa-circle-check {
+  visibility: visible;
+  color: #2eec71;
+}
+
+.form-container.error input {
+  border-color: #e74c3c;
+}
+
+.form-container.error i.fa-circle-exclamation {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form-container.error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+#saveBtn {
+  background: #568067;
+  border-radius: 28.5px;
+  width: 384px;
+  height: 55px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.accept-conditions {
+  position: relative;
+  margin: 0 0 20px 40px;
+}
+
+[type="checkbox"] {
+  display: none;
+}
+
+.accept-conditions label {
+  font-family: 'Roboto';
+}
+
+.accept-conditions label:before {
+  content: ' ';
+  border: 1px solid #595959;
+  border-radius: 3px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -40px;
+  top: 5%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+}
+
+[type="checkbox"]:checked + label:before {
+  border: none;
+  background-color:  #568067;
+  content: '\f00c';
+  font-family: FontAwesome;
+  color: white;
+  padding-left: 5px;
+  transform: rotate(360deg);
+}
+
+.link {
+  color: #5887FF;
+}
+
+.talavera-design {
+  background: url(../assets/img/home-page/Talavera-footer.png);
+  width: 100%;
+  height: 10vh;
+  mix-blend-mode: screen;
+  position: absolute;
+  left: 0;
+  bottom: 10;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+  .left-main-container {
+    margin: 0;
+    scale: 0.9;
+    transition: all 0.5s ease;
+  }
+
+  .img-container img{
+    height: 60%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .img-container img{
+    height: 50%;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 750px) {
+  .img-container img{
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .left-main-container {
+    text-align: center;
+  }
+}
+
