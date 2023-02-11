@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contactanos</title>
+
+    <!-- Bootstrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Other Dependencies  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.jpg" />
+    <link rel="stylesheet" href="../css/contactanos.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="main-container">
+        <!-- Contenedor principal -->
+        <div class="row flex-sm-row-reverse justify-content-center">
+          <div class="col-12 col-md-7 justify-content-center">
+            <!-- FORMULARIO -->
+            <center>
+              <section class="formulario">
+                <div class="col">
+                  <form
+                    action="https://formsubmit.co/saboramorjam@gmail.com"
+                    method="POST"
+                    class="form-horizontal"
+                    id="formularioid"
+                  >
+                    <fieldset>
+                      <legend class="text-center header">
+                        Contácta con nosotros
+                      </legend>
+                      <div class="form-group">
+                        <div class="row justify-content-center">
+                          <!-- Recuadro Nombre -->
+                          <div class="col-sm-12 col-md-4">
+                            <input
+                              id="fnameid"
+                              name="name"
+                              type="text"
+                              placeholder="Nombre"
+                              class="form-control"
+                            />
+                          </div>
+                          <!-- Recuadro Apellido -->
+                          <div class="col-sm-12 col-md-4">
+                            <input
+                              id="lnameid"
+                              name="LastName"
+                              type="text"
+                              placeholder="Apellido"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                        <!--email-->
+                        <div class="row justify-content-center">
+                          <div class="col-md-8">
+                            <input
+                              id="emailid"
+                              name="email"
+                              type="text"
+                              placeholder="Correo electrónico"
+                              class="form-control"
+                            />
+                          </div>
+                          <!-- Teléfono -->
+                          <div class="col-md-8">
+                            <input
+                              id="phoneid"
+                              name="phone"
+                              type="text"
+                              placeholder="Número telefónico"
+                              class="form-control"
+                            />
+                          </div>
+                          <!-- Mensaje -->
+                          <div class="col-md-8">
+                            <textarea
+                              class="form-control"
+                              id="messageid"
+                              name="message"
+                              placeholder="Escríbenos tu comentario."
+                              rows="7"
+                            ></textarea>
+                          </div>
+                          <!-- Enviar datos -->
+                          <div class="col-md-12 text-center">
+                            <button
+                              type="submit"
+                              class="btn btn-primary btn-lg mb-3"
+                              id="sendData"
+                            >
+                              Enviar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+              </section>
+            </center>
+            <!--  -->
+          </div>
+          <div class="col-sm-10 col-md-5 text-center">
+            <!-- REDES SOCIALES -->
+            <legend class="text-center header mb-4">
+              Nuestras redes sociales
+            </legend>
+            <div class="container-fluid">
+              <div class="row justify-content-center align-items-start">
+                <div class="col-6 col-md-12 redes">
+                  <!-- Instagram -->
+                  <a
+                    class="social-icon"
+                    href="https://www.instagram.com/saboramorjam/"
+                    target="_blank"
+                    ><img
+                      class="img-fluid img-profile rounded-circle mx-auto"
+                      src="../assets/logos/instagram.png"
+                      alt="Logo instagram"
+                  /></a>
+                  <p>Instagram</p>
+                </div>
+                <div class="col-6 col-md-12 redes">
+                  <!-- Facebook -->
+                  <a
+                    class="social-icon"
+                    href="https://www.facebook.com/SaborAmor1967?mibextid=ZbWKwL"
+                    target="_blank"
+                    ><img
+                      class="img-fluid img-profile rounded-circle mx-auto"
+                      src="../assets/logos/facebook.png"
+                      alt="Logo Facebook"
+                  /></a>
+                  <p>Facebook</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/contactanos.js"></script>
+    <script src="../js/navbar.js"></script>
+  </body>
+</html>
