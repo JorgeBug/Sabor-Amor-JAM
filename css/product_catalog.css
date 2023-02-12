@@ -1,4 +1,5 @@
 /* navBar styles */
+/*
 .navbar-collapse{
     align-items: center;
     justify-content: space-between;
@@ -8,7 +9,7 @@
     font-size: 25px;
     font-family: 'Museo Sans 100';
 }
-
+/*
 
 /* catalog styles */
 main,.card{
