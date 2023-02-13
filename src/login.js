@@ -3,7 +3,10 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const saveInfoBtn = document.getElementById("saveBtn").addEventListener("click", saveData);
 
+const storedEmail = "jorgeo.1225@gmail.com";
+const storedPassword = "123";
 
+localStorage.setItem(storedEmail, storedPassword);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,29 +18,27 @@ function checkInputs() {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  if (emailValue === "") {
-    setErrorFor(email, "El email no puede estar en blanco");
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "El email no es válido");
-  } else {
+  if (emailValue === storedEmail && passwordValue === storedPassword) {
     setSuccesFor(email);
-  }
-
-  if (passwordValue === "") {
-    setErrorFor(password, "La contraseña no puede estar en blanco");
-  } else if (!passwordCheck(passwordValue)) {
-    setErrorFor(
-      password,
-      "La contraseña debe tener mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número"
-    );
-  } else {
     setSuccesFor(password);
-  }
+    location.href = "../index.html";
 
-  if(document.querySelectorAll(".error").length == 0){
-    location.href = "/index.html";
-  }
+  } else {
+    if (emailValue === "") {
+      setErrorFor(email, "El email no puede estar en blanco");
+    } else if (!isEmail(emailValue)) {
+      setErrorFor(email, "El email no es válido");
+    } else {
+      setErrorFor(email, "");
+    }
 
+    if (passwordValue === "") {
+      setErrorFor(password, "La contraseña no puede estar en blanco");
+    } else {
+
+      setErrorFor(password, "El email del usuario o la contraseña no son correctos");
+    }
+  }
 }
 
 function setErrorFor(input, message) {
@@ -58,10 +59,6 @@ function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   );
-}
-
-function passwordCheck(password) {
-  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
 }
 
 function saveData() {
