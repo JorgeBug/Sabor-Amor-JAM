@@ -161,7 +161,9 @@ a.nav-link:hover {
 }
 
 #btn-conoce-mas{
+  margin-top: 25px;
   margin-bottom: 50px;
+  z-index: 100;
 }
 
 
@@ -182,6 +184,7 @@ a.nav-link:hover {
   background-size: cover;
   width: 99vw;
   height: 300px;
+  z-index: -100;
 }
 
 /* // Small devices (landscape phones, 576px and up) */
