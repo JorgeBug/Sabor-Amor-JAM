@@ -2,6 +2,18 @@ topProductSection = "top-product-container";
 bottomProductSection = "bottom-product-container";
 const jsonPath = "../assets/data/catalog.json";
 
+salsas_mas_vendidas = [
+  "Salsa de Habanero con Mango",
+  "Salsa Chilapeña",
+  "Salsa de Cacahuate",
+];
+
+mermeladas_mas_vendidas = [
+  "Mermelada de Frutos Rojos",
+  "Mermelada de Jamaica",
+  "Mermelada de Fresa",
+];
+
 const createProductString = () => {
   return `<div class="pro">
         <img
@@ -35,4 +47,28 @@ const populateMainPageCatalog = () => {
   }
 };
 
-populateMainPageCatalog();
+async function loadFullCatalog() {
+  fetch(jsonPath).then((response) =>
+    response
+      .json()
+      .then((data) => ({
+        data: data,
+      }))
+      .then((res) => {
+        //De todo el JSON, unicamente obtener los elementos mas vendidos
+        salsas = res.data[0];
+        salsasParaPaginaPrincipal = [];
+
+        for (let i = 0; i < salsas.length; i++) {
+          salsa = salsas[i].name;
+          if (salsas_mas_vendidas.includes(salsa)) {
+            salsasParaPaginaPrincipal.push(salsas[i]);
+          }
+        }
+
+        console.log(salsasParaPaginaPrincipal);
+      })
+  );
+}
+
+loadFullCatalog();
