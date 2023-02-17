@@ -4,7 +4,25 @@ const phone = document.getElementById("phone-num");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("check-password");
-const saveInfoBtn = document.getElementById("saveBtn").addEventListener("click", saveData);
+const saveInfoBtn = document.getElementById("saveBtn");
+const checkbox = document.getElementById("check");
+
+const EMPTY_NAME_MSG = "El nombre no puede estar en blanco";
+const EMPTY_EMAIL_MSG = "El email no puede estar en blanco";
+const INVALID_EMAIL_MSG = "El email no es válido";
+const EMPTY_PASSWORD_MSG = "La contraseña no puede estar en blanco";
+const INVALID_PASSWORD_MSG =
+  "La contraseña debe tener mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número";
+const EMPTY_PHONE_MSG = "El número de teléfono no puede estar en blanco";
+const INVALID_PHONE_MSG = "Ups, parece que no es un número válido";
+const PASSWORDMISMATCH_MSG = "Las contraseñas no coinciden";
+
+username.addEventListener("input", checkInputs);
+phone.addEventListener("input", checkInputs);
+email.addEventListener("input", checkInputs);
+password.addEventListener("input", checkInputs);
+password2.addEventListener("input", checkInputs);
+checkbox.addEventListener("change", checkInputs);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -19,51 +37,71 @@ function checkInputs() {
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
 
+  let isNameValid = false;
+  let isEmailValid = false;
+  let isPasswordValid = false;
+  let isPassword2Valid = false;
+  let isPhoneValid = false;
+
   if (nameValue === "") {
-    setErrorFor(username, "El nombre no puede estar en blanco");
+    setErrorFor(username, EMPTY_NAME_MSG);
   } else {
-    setSuccesFor(username);
+    isNameValid = true;
+    setSuccessFor(username);
   }
 
   if (emailValue === "") {
-    setErrorFor(email, "El email no puede estar en blanco");
+    setErrorFor(email, EMPTY_EMAIL_MSG);
   } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "El email no es válido");
+    setErrorFor(email, INVALID_EMAIL_MSG);
   } else {
-    setSuccesFor(email);
+    isEmailValid = true;
+    setSuccessFor(email);
   }
 
   if (passwordValue === "") {
-    setErrorFor(password, "La contraseña no puede estar en blanco");
-  } else if (!passwordCheck(passwordValue)) {
-    setErrorFor(
-      password,
-      "La contraseña debe tener mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número"
-    );
+    setErrorFor(password, EMPTY_PASSWORD_MSG);
+  } else if (!isValidPassword(passwordValue)) {
+    setErrorFor(password, INVALID_PASSWORD_MSG);
   } else {
-    setSuccesFor(password);
+    isPasswordValid = true;
+    setSuccessFor(password);
   }
 
   if (password2Value === "" && !passwordCheck(passwordValue)) {
-    setErrorFor(password2, "La contraseña no puede estar en blanco");
+    setErrorFor(password2, EMPTY_PASSWORD_MSG);
   } else if (!passwordCheck(password2Value)) {
-    setErrorFor(
-      password2,
-      "La contraseña debe tener mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número"
-    );
+    setErrorFor(password2, INVALID_PASSWORD_MSG);
   } else if (password2Value !== passwordValue) {
-    setErrorFor(password2, "Las contraseñas no coinciden");
+    setErrorFor(password2, PASSWORDMISMATCH_MSG);
   } else {
-    setSuccesFor(password2);
+    isPassword2Valid = true;
+    setSuccessFor(password2);
   }
 
   if (phoneValue === "") {
-    setErrorFor(phone, "El número de telefono no puede estar en blanco");
+    setErrorFor(phone, EMPTY_PHONE_MSG);
   } else if (!validPhone(phoneValue)) {
-    setErrorFor(phone, "Ups, parece que no es un número válido");
+    setErrorFor(phone, INVALID_PHONE_MSG);
   } else {
-    setSuccesFor(phone);
+    isPhoneValid = true;
+    setSuccessFor(phone);
   }
+
+  if (
+    isNameValid &&
+    isEmailValid &&
+    isPasswordValid &&
+    isPassword2Valid &&
+    isPhoneValid &&
+    checkbox.checked
+  ) {
+    saveInfoBtn.disabled = false;
+  }
+}
+
+function isValidPassword(password) {
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
 }
 
 function setErrorFor(input, message) {
@@ -75,7 +113,7 @@ function setErrorFor(input, message) {
   formControl.className = "form-container error";
 }
 
-function setSuccesFor(input) {
+function setSuccessFor(input) {
   const formControl = input.parentElement; //form-container
   formControl.className = "form-container success";
 }
@@ -96,6 +134,8 @@ function validPhone(phone) {
   );
 }
 
+saveInfoBtn.addEventListener("click", saveData);
+
 function saveData() {
   const nameValue = username.value.trim();
   const phoneValue = phone.value.trim();
@@ -103,6 +143,6 @@ function saveData() {
   const passwordValue = password.value.trim();
 
   addUser(nameValue, phoneValue, emailValue, passwordValue);
-}
 
-saveData();
+  location.reload();
+}

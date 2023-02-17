@@ -23,11 +23,10 @@
     />
 
     <!-- Icon  -->
-    <link rel="icon" href="../assets/logos/logo-marca.ico">
+    <link rel="icon" href="../assets/logos/logo-marca.ico" />
 
     <!-- Custom Styles  -->
     <link rel="stylesheet" href="../css/registro.css" />
-
   </head>
 
   <body>
@@ -66,7 +65,7 @@
               <i class="fa-solid fa-circle-exclamation"></i>
               <small>Error</small>
             </div>
-            <div class="form-container">
+            <div class="form-container password-container">
               <label class="rounded-pill w-100"
                 >Contraseña <span class="required">*</span>:</label
               >
@@ -75,7 +74,7 @@
               <i class="fa-solid fa-circle-exclamation"></i>
               <small>Error</small>
             </div>
-            <div class="form-container">
+            <div class="form-container password-container">
               <label class="rounded-pill w-100"
                 >Confirmar contraseña <span class="required">*</span>:</label
               >
@@ -90,7 +89,7 @@
             </div>
 
             <div class="accept-conditions">
-              <input type="checkbox" id="active" required />
+              <input type="checkbox" id="check" required />
               <label for="active">
                 Acepto <a class="link" href="#"> Terminos & Condiciones </a>
               </label>
@@ -100,6 +99,7 @@
               id="saveBtn"
               type="submit"
               class="btn btn-primary btn-lg rounded-pill col-2 mx-auto"
+              disabled
             >
               Registrar
             </button>

@@ -34,7 +34,7 @@ span.required {
 
 .form-container {
   margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -54,8 +54,8 @@ input {
 
 .form-container i {
   position: absolute;
-  top: 42px;
-  right: 0px;
+  top: 30%;
+  right: 0%;
   visibility: hidden;
 }
 
@@ -100,39 +100,21 @@ input {
 
 .accept-conditions {
   position: relative;
-  margin: 0 0 20px 40px;
+  display: flex;
+  padding: 10px;
 }
 
-[type="checkbox"] {
-  display: none;
+.accept-conditions input {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .accept-conditions label {
   font-family: 'Roboto';
-}
-
-.accept-conditions label:before {
-  content: ' ';
-  border: 1px solid #595959;
-  border-radius: 3px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  left: -40px;
-  top: 5%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-  transform: rotate(0deg);
-}
-
-[type="checkbox"]:checked + label:before {
-  border: none;
-  background-color:  #568067;
-  content: '\f00c';
-  font-family: FontAwesome;
-  color: white;
-  padding-left: 5px;
-  transform: rotate(360deg);
+  padding-left: 30px;
 }
 
 .link {
@@ -176,6 +158,13 @@ input {
 @media (max-width: 750px) {
   .img-container img{
     display: none;
+  }
+
+  .form-container i {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    visibility: hidden;
   }
 }
 
