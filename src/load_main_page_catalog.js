@@ -14,11 +14,11 @@ mermeladas_mas_vendidas = [
   "Mermelada de Fresa",
 ];
 
-const createProductString = () => {
+const createProductString = (imgPath, name, price) => {
   return `<div class="pro">
         <img
         class="img-fluid"
-        src="../assets/img/home-items/Chile morita.png"
+        src="${imgPath}"
         alt=""
         />
         <div class="fav-icon">
@@ -30,8 +30,8 @@ const createProductString = () => {
         <i class="fa-solid fa-pepper-hot"></i>
         </div>
         <div class="description">
-        <h4 class="item-title">salsa de chile morita</h4>
-        <span>$70.00 MXN</span>
+        <h4 class="item-title">${name}</h4>
+        <span>$${price} MXN</span>
         <button class="cart-button"><a href="#aver">+ Añadir</a></button>
         </div>
     </div>`;
@@ -55,20 +55,47 @@ async function loadFullCatalog() {
         data: data,
       }))
       .then((res) => {
-        //De todo el JSON, unicamente obtener los elementos mas vendidos
         salsas = res.data[0];
-        salsasParaPaginaPrincipal = [];
+        mermeladas = res.data[1];
 
-        for (let i = 0; i < salsas.length; i++) {
-          salsa = salsas[i].name;
-          if (salsas_mas_vendidas.includes(salsa)) {
-            salsasParaPaginaPrincipal.push(salsas[i]);
-          }
-        }
+        salsasParaPaginaPrincipal = getMainProductArray(
+          salsas,
+          salsas_mas_vendidas
+        );
+        mermeladasParaPaginaPrincipal = getMainProductArray(
+          mermeladas,
+          mermeladas_mas_vendidas
+        );
 
-        console.log(salsasParaPaginaPrincipal);
+        populateCatalog(salsasParaPaginaPrincipal, topProductSection);
+        populateCatalog(mermeladasParaPaginaPrincipal, bottomProductSection);
       })
   );
 }
+
+const populateCatalog = (SauceArray, sectionID) => {
+  productSection = document.getElementById(sectionID);
+  for (let i = 0; i < SauceArray.length; i++) {
+    const name = SauceArray[i].name;
+    const price = SauceArray[i].price;
+    const imgPath = SauceArray[i].imgPath;
+
+    sauceHTML = createProductString(imgPath, name, price);
+    productSection.innerHTML += sauceHTML;
+  }
+};
+
+//Regresa un arreglo de objetos JSON con la
+//informacion de las salsas mas populares
+const getMainProductArray = (salsas, productArray) => {
+  productosParaPaginaPrincipal = [];
+  for (let i = 0; i < salsas.length; i++) {
+    salsa = salsas[i].name;
+    if (productArray.includes(salsa)) {
+      productosParaPaginaPrincipal.push(salsas[i]);
+    }
+  }
+  return productosParaPaginaPrincipal;
+};
 
 loadFullCatalog();
