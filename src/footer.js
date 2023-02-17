@@ -9,9 +9,12 @@ function createFooter() {
     footer.style.display = "flex";
     footer.style.justifyContent = "center";
     footer.style.height = "100px";
-    footer.style.color = "rgba(34, 32, 49, 1)";
-    footer.style.fontSize = "18px";
+    footer.style.color = "rgba(126, 126, 126, 1)";
+    footer.style.fontFamily = "Poppins, sans-serif";
+    footer.style.fontWeight = "300";
+    footer.style.fontSize = "16px";
     footer.style.flexDirection = "column";
+    footer.style.bottom = "0";
     /* Contenedor para los iconos */
     let iconsContainer = document.createElement("div");
     iconsContainer.style.display = "flex";
@@ -26,6 +29,7 @@ function createFooter() {
     facebookLogo.classList.add("fab", "fa-facebook-square");
     facebookLogo.style.fontSize = "35px";
     facebookLogo.style.margin = "30px";
+    facebookLogo.style.color = "rgba(126, 126, 126, 1)";
     facebookLogo.style.justifyContent = "center-start";
     /* Icono Instagram */
     let instagramLink = document.createElement("a");
@@ -35,6 +39,7 @@ function createFooter() {
     instagramLogo.classList.add("fab", "fa-instagram");
     instagramLogo.style.fontSize = "35px";
     instagramLogo.style.margin = "30px";
+    instagramLogo.style.color = "rgba(126, 126, 126, 1)";
     
     facebookLink.appendChild(facebookLogo);
     iconsContainer.appendChild(facebookLink);
@@ -65,7 +70,6 @@ function createFooter() {
     footer.appendChild(iconsContainer);
     footer.appendChild(textContainer);
     footer.appendChild(textContainer2);
-
     document.body.appendChild(footer);
 }
 

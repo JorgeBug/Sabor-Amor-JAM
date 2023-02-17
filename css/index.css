@@ -14,7 +14,8 @@
 /************ Reset Styles **************/
 
 body {
-  font-family: "Museo Sans 500";
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
