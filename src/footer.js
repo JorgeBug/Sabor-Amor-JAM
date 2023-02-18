@@ -9,8 +9,10 @@ function createFooter() {
     footer.style.display = "flex";
     footer.style.justifyContent = "center";
     footer.style.height = "100px";
-    footer.style.color = "rgba(34, 32, 49, 1)";
-    footer.style.fontSize = "18px";
+    footer.style.color = "rgba(126, 126, 126, 1)";
+    footer.style.fontFamily = "Poppins, sans-serif";
+    footer.style.fontWeight = "300";
+    footer.style.fontSize = "16px";
     footer.style.flexDirection = "column";
     /* Contenedor para los iconos */
     let iconsContainer = document.createElement("div");
