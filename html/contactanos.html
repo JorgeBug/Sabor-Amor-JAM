@@ -50,17 +50,20 @@
                       <legend class="text-center header">
                         Contácta con nosotros
                       </legend>
-                      <div class="form-group">
-                        <div class="row justify-content-center">
+                      <div class="form-container" >
+                        <div class="row justify-content-center" >
                           <!-- Recuadro Nombre -->
-                          <div class="col-sm-12 col-md-4">
+                          <div class="col-sm-12 col-md-4" style="display: inline-block;">
                             <input
                               id="fnameid"
                               name="name"
                               type="text"
                               placeholder="Nombre"
-                              class="form-control"
+                              class="form-control form-control-lg"
                             />
+                            <!--<i class="fa-solid fa-circle-check"></i>-->
+                            <!--<i class="fa-solid fa-circle-exclamation"></i>-->
+                            <small>error</small>
                           </div>
                           <!-- Recuadro Apellido -->
                           <div class="col-sm-12 col-md-4">
@@ -69,8 +72,11 @@
                               name="LastName"
                               type="text"
                               placeholder="Apellido"
-                              class="form-control"
+                              class="form-control form-control-lg"
                             />
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small>error</small>
                           </div>
                         </div>
                         <!--email-->
@@ -81,8 +87,11 @@
                               name="email"
                               type="text"
                               placeholder="Correo electrónico"
-                              class="form-control"
+                              class="form-control form-control-lg"
                             />
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small>error</small>
                           </div>
                           <!-- Teléfono -->
                           <div class="col-md-8">
@@ -91,8 +100,11 @@
                               name="phone"
                               type="text"
                               placeholder="Número telefónico"
-                              class="form-control"
+                              class="form-control form-control-lg"
                             />
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small>error</small>
                           </div>
                           <!-- Mensaje -->
                           <div class="col-md-8">
@@ -102,7 +114,11 @@
                               name="message"
                               placeholder="Escríbenos tu comentario."
                               rows="7"
+                              class="form-control form-control-lg"
                             ></textarea>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small>error</small>
                           </div>
                           <!-- Enviar datos -->
                           <div class="col-md-12 text-center">
