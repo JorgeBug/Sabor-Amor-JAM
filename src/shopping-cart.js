@@ -104,8 +104,8 @@ function deleteItem(event) {
   cart.splice(itemIndex, 1);
   localStorage.setItem("data", JSON.stringify(cart));
   itemRow.remove();
-  refreshCartCounter();
   refreshTotal();
+  refreshCartCounter();
 }
 
 // Realizar pago
