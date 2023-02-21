@@ -41,13 +41,16 @@ const createCardString = (imgRoute, cardTitle) => {
     <div class="card-body">
       <h5 class="card-title">${cardTitle}</h5>
       <h5 class="card-text">$70.00</h5>
-      <a
-        href="#"
+      <button
+        onclick="addToCart(event)"
         class="btn btn-primary btn-lg border-0 btn-rounded"
+        data-name="${cardTitle}"
+        data-price="70.00"
+        data-img="${imgRoute}"
         id="add-btn"
       >
         AÑADIR
-      </a>
+      </button>
     </div>
   </div>
 </div>`;

@@ -22,22 +22,21 @@
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
-    />
-    <link
+      />
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+      />
+      
+      <!-- Custom Styles  -->
+      <link rel="stylesheet" href="../css/styles.css" />
 
-    <!-- Custom Styles  -->
-    <link rel="stylesheet" href="../css/styles.css" />
-
-    <!-- Logo-->  
-    
+      <!-- Logo-->  
+      
     <!--<link rel="icon" href="../assets/img/logo.jpg" />-->
-    
   </head>
   <body>
     
@@ -47,46 +46,49 @@
           <img src="../assets/logos/logo-marca.png" alt="Sabor amor Logo" />
         </a>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
+          >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end align-content-end"
-          id="navbarNavDropdown"
+        class="collapse navbar-collapse justify-content-end align-content-end"
+        id="navbarNavDropdown"
         >
-          <span class="text-brand">SABOR AMOR JAM</span>
-          <ul class="navbar-nav align-items-end">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/about-us.html"
-                >¿Quiénes somos?</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/product-catalog.html"
+        <span class="text-brand">SABOR AMOR JAM</span>
+        <ul class="navbar-nav align-items-end">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/about-us.html"
+            >¿Quiénes somos?</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/product-catalog.html"
                 >Productos</a
-              >
-            </li>
-            <li class="nav-item dropdown">
+                >
+              </li>
+              <li class="nav-item dropdown">
               <a class="nav-link" href="/html/registro.html">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/html/contactanos.html"
-                >Contactános</a
+              >Contactános</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../html/cart.html">
+              <a class="nav-link" href="../html/shopping-cart.html">
                 <i class="fa-solid fa-wine-bottle"></i>
+                <div class="counter">
+                  0
+                </div>
               </a>
             </li>
             <li class="nav-item">
@@ -98,11 +100,12 @@
         </div>
       </div>
     </nav>
-
+    
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
     ></script>
+    <script src="../src/shopping-cart.js"></script>
   </body>
 </html>

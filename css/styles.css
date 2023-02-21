@@ -74,6 +74,20 @@ nav.navbar {
   -moz-box-shadow: 0px 6px 10px 0px rgba(166, 133, 133, 0.75);
 }
 
+.counter {
+  width: 18px;
+  height: 18px;
+  background-color: var(--emphasis-color);
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 span.text-brand {
   position: absolute;
   left: 50%;
@@ -85,6 +99,7 @@ span.text-brand {
 }
 
 a.nav-link {
+  position: relative;
   border-bottom: 2px solid transparent;
   transition: all 0.5s ease;
   padding-bottom: 0;

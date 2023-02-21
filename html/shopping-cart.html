@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/shopping-cart.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <script src="../src/navbar.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div class="principal-container">
+        <h2>Carrito de Compras</h2>
+        <div class="cart-container">
+          <div id="item-container" class="list-items"></div>
+          <div class="checkout-container">
+            <div class="total">
+              <span>Total: $</span>
+              <span>0.00</span>
+            </div>
+            <button onclick="makePayment()">Proceder a método de pago</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer src="../src/shopping-cart.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+    integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
