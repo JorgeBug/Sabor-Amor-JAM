@@ -125,4 +125,6 @@ function makePayment() {
   refreshTotal();
 
   localStorage.removeItem("data");
+  window.location.replace("../html/shipment.html");
+
 }
