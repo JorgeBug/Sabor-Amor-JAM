@@ -72,101 +72,57 @@ span.required{
   
 .form-container {
     margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     position: relative;
 }
-  
-input {
-    background: rgba(255, 255, 255, 0.5);
-    border: 2.5px solid #e7e7e7;
-    border-radius: 28.5px;
-    width: 384px;
-    height: 55px;
-    margin-bottom: 35px;
-    padding-left: 30px;
-    overflow: hidden;
-  }
-  
   .form-container i {
     position: absolute;
-    top: 42px;
-    right: 0px;
+    /*right: 120px;*/
+    margin-left: 110px;
+    margin-top: -50px;
     visibility: hidden;
   }
 
-  .form-container small {
-    position: absolute;
-    visibility: hidden;
-    bottom: 0;
-    left: 0;
-
-  }
-
-  .form-container.success input {
+  .success input {
     border-color: #2eec71;
-    position: absolute;
+    
   }
   
-  .form-container.success i.fa-circle-check {
+  .success i.fa-circle-check {
     visibility: visible;
     color: #2eec71;
   }
 
-  .form-container.error i.fa-circle-exclamation {
+  .success textarea {
+    border: 2px solid #2eec71;
+  }
+
+  .error input {
+    border: 2px solid #e74c3c;
+  }
+
+  .error textarea {
+    border: 2px solid #e74c3c;
+}
+
+  .error i.fa-circle-exclamation {
     visibility: visible;
     color: #e74c3c;
     display: inline;
   }
   
-  .form-container.error small {
+  .error small {
     color: #e74c3c;
     visibility: visible;
     padding-bottom: 0%;
     padding-top: 0%;
-    margin-top: 1% !important; 
+    margin-top: -30px;
+    margin-left: -90px;
     max-height: 20px;
     position: absolute;
-    border:solid 1px black;
-
   }
   
-
-  .accept-conditions {
-    position: relative;
-    margin: 0 0 20px 40px;
-  }
-
-  .accept-conditions label {
-    font-family: 'Roboto';
-  }
-
   .form-container.error input {
     border-color: #e74c3c;
   }
   
-  input[type="submit"] {
-    position: relative;
-  }
-
-  input[type="submit"]::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #007bff;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  input[type="submit"]:hover::after {
-    background-color: #0062cc;
-    cursor: pointer;
-  }

@@ -77,17 +77,21 @@ function setErrorForInput(input, message) {
 
     small.innerText = message;
 
-    formControl.className = "form-container error";
+    formControl.classList.add('error');
 
     if(input === messagec){
-        formControl.classList.add("message-error");
+        formControl.classList.add("error");
     }
 }
 
 //Muestra el mensaje de Correcto
 function setSuccesFor(input){
     const formControl = input.parentElement;
-    formControl.className = "form-container success";
+    formControl.classList.add('success');
+
+    const small = formControl.querySelector("small");
+    small.innerText = "";
+    formControl.classList.remove('error');
 }
 
 //Validaciones con Expresiones regulares
@@ -104,42 +108,10 @@ function validPhone(phone){
       );
 }
 
-/*
-function saveData() {
-    const fnameContact = fname.value.trim();
-    const lnameContact = lastName.value.trim();
-    const emailContact = email.value.trim();
-    const phoneContact = phone.value.trim();
-    const messageContact = messagec.value.trim();
-  }
-  
-  saveData();
-/*
-document.getElementById("formularioid").addEventListener("submit", function(event){
-    event.preventDefault();
-    
-    if(fname.value === ""){
-        console.log(alert("Llena el campo: Nombre"));
-        return;
-    }
-    if(lastName.value ===""){
-        console.log(alert("Llena el campo: Apellido"));
-        return;
-    }
-    if(!email.value.match(/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/)){
-        console.log(alert("Llena el campo o asegurate que este bien escrito: Correo electrónico"));
-        return;
-    }
-    if(phone.value.length !== 10 || phone.value === ""){
-        console.log(alert("Llena el campo: Telefono con 10 digitos"));
-        return;
-    }
-    if(message.value === ""){
-        console.log(alert("Ingresa un comentario"));
-        return;
-    }
-
-    let form = document.getElementById("formularioid");
-    form.submit();
+document.addEventListener("DOMContentLoaded", () => {
+    const small = document.querySelectorAll("small");
+    small.forEach((element) => {
+        element.innerText = "";
+    });
 });
-*/
+
