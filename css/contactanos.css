@@ -1,50 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,400&family=Roboto:wght@100;300;400;500&display=swap");
 
 * {
     box-sizing: border-box;
 }
 
 .main-container {
-    padding-top: 160px;
+    padding-top: 120px;
 }
 
-h1.header {
+.header {
     font-family: "Poppins", sans-serif;
-    font-size: 30px;
-    padding-bottom: 40px;
-    font-weight: 700;
-  }
-  
-#fnameid,
-#lnameid,
-#emailid,
-#phoneid {
-    font-family: 'Figtree', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-size: 33px;
+    margin-bottom: 50px;
+}
+
+#fnameid, #lnameid, #emailid, #phoneid{
+    font-family: "Roboto", sans-serif;
     background: rgba(255, 255, 255, 0.5);
-    border: 2.5px solid #e7e7e7;
     border-radius: 28.5px;
     height: 55px;
     margin-bottom: 32.5px;
 }
 
-#messageid {
-    font-family: 'Figtree', sans-serif;
+#messageid{
+    font-family: "Roboto", sans-serif;
     background: rgba(255, 255, 255, 0.5);
-    border: 2.5px solid #e7e7e7;
     border-radius: 28.5px;
     margin-bottom: 32.5px;
 }
 
-.redes p {
-    font-family: 'Figtree', sans-serif;
+.redes p{
+    font-family: "Roboto", sans-serif;
     margin-top: 10px;
-    font-weight: 700;
+    font-weight: 500;
 }
-
-div.redes{
-    margin-top: 40px;
+.message-error textarea {
+    border: 2px solid #b40414;
 }
 
 #sendData {
@@ -66,15 +57,75 @@ div.redes{
 
 #lname,
 #email,
-#phone {
+#phone{
     height: 55px;
     left: 843px;
 }
 
-#message {
+#messageid{
     height: 164px;
 }
 
-form{
-    margin-bottom: 30px;
+span.required{
+    color: #b40414;
 }
+  
+.form-container {
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    position: relative;
+}
+  .form-container i {
+    position: absolute;
+    /*right: 120px;*/
+    margin-left: 145px;
+    margin-top: -53px;
+    visibility: hidden;
+  }
+
+  .success input {
+    border-color: #2eec71;
+    
+  }
+  
+  .success i.fa-circle-check {
+    visibility: visible;
+    color: #2eec71;
+  }
+
+  .success textarea {
+    border: 2px solid #2eec71;
+  }
+
+  .error input {
+    border: 2px solid #e74c3c;
+  }
+
+  .error textarea {
+    border: 2px solid #e74c3c;
+}
+
+  .error i.fa-circle-exclamation {
+    visibility: visible;
+    color: #e74c3c;
+    display: inline;
+  }
+  
+  .error small {
+    color: #e74c3c;
+    visibility: visible;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    margin-top: -35px;
+    margin-left: -130px;
+    max-height: 20px;
+    position: absolute;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  
+  .form-container.error input {
+    border-color: #e74c3c;
+  }
+  
