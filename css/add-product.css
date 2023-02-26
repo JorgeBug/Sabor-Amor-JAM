@@ -4,7 +4,7 @@ body {
     background-color: #F0F4F7;
 }
 
-h1 {
+.section-product h1 {
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     padding-bottom: 30px;
@@ -17,7 +17,7 @@ h1 {
     align-items: center;
 }
 
-form label {
+.section-product form label {
     font-family: 'Figtree', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -26,8 +26,8 @@ form label {
     width: 80%;
 }
 
-form input,
-select {
+.section-product form input,
+select{
     background: rgba(255, 255, 255, 0.5);
     border: 2.5px solid #e7e7e7;
     border-radius: 28.5px;
@@ -53,21 +53,72 @@ select {
     font-size: 16px;
 }
 
-button {
+#enviar{
     font-family: 'Figtree', sans-serif;
     font-weight: 400;
     width: 80%;
-    background: #4C87C2;
-    border: 3px solid #4C87C2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 28px;
     margin-top: 8%;
+    margin-bottom: 40px;
     height: 50px;
     color: #F0F4F7;
+}
+
+#enviar:enabled {
+    background-color: #4C87C2;
+    border: 3px solid #4C87C2;
+}
+
+#enviar:disabled {
+    background: #7ea8d2;
+    border: 3px solid #7ea8d2;
 }
 
 #price,
 #season,
 #category {
     text-align: center;
+    margin-bottom: 32.5px;
 }
+
+.success input {
+    border-color: #2eec71;
+    
+  }
+
+  .success textarea {
+    border: 2px solid #2eec71;
+  }
+
+  .error input {
+    border: 2px solid #e74c3c;
+  }
+
+  .error textarea {
+    border: 2px solid #e74c3c;
+}
+
+.error small {
+    color: #e74c3c;
+    visibility: visible;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    margin-top: -35px;
+    margin-left: -130px;
+    max-height: 20px;
+    position: absolute;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  
+  .form-container.error input {
+    border-color: #e74c3c;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
