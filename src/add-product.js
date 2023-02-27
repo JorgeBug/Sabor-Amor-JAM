@@ -5,7 +5,7 @@ const nameInput = document.getElementById('name');
 const description = document.getElementById('description');
 const price = document.getElementById('price');
 const season = document.getElementById('season');
-//const comment = document.getElementById('comment');
+const image = document.getElementById('image');
 const enviarBtn = document.getElementById('enviar');
 
 // verificar campos al enviar formulario
@@ -19,6 +19,7 @@ const selectRegex = /^.+$/;
 const nameRegex = /^.{5,}[a-zA-Z\s]+$/;
 const descriptionRegex = /^.{10,}$/;
 const priceRegex = /^\d+(\.\d{1,2})?$/;
+const regImgUrl= /^https:\/\/res\.cloudinary\.com\/.*$/;
 
 // validar campos en tiempo real
 category.addEventListener('input', () => {
@@ -41,10 +42,10 @@ season.addEventListener('input', () => {
     validateInput(season, selectRegex);
     checkAllInputs();
 });
-/* comment.addEventListener('input', () => {
-    validateInput(comment, /.+/);
+image.addEventListener('input', () => {
+    validateInput(image, regImgUrl);
     checkAllInputs();
-}); */
+});
 
 // función para validar campo y mostrar mensaje de error
 function validateInput(input, regex) {
@@ -66,8 +67,8 @@ function checkAllInputs() {
         validateInput(nameInput, nameRegex) &&
         validateInput(description, descriptionRegex) &&
         validateInput(price, priceRegex) &&
-        validateInput(season, selectRegex)
-    /* && validateInput(comment, /.+/) */) {
+        validateInput(season, selectRegex) && 
+        validateInput(image, regImgUrl)) {
         enviarBtn.disabled = false;
     } else {
         enviarBtn.disabled = true;
@@ -107,8 +108,10 @@ function storeProduct() {
         name: nameInput.value.trim(),
         description: description.value.trim(),
         price: price.value.trim(),
-        season: season.value
+        season: season.value,
+        imageURL: image.value
     };
+
     if (category.value === 'salsa') {
         products.salsas.push(newProduct);
         localStorage.setItem('products', JSON.stringify(products));

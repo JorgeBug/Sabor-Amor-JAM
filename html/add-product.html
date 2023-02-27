@@ -29,18 +29,16 @@
         <div class="main-container">
             <section class="section-product">
                 <div class="row">
-                    <!-- Imagen -->
-                    <div class="col-sm-10 col-md-10 col-lg-6 col-12">
-                        <h1>Crear nuevo producto</h1>
-                    </div>
 
                     <!-- Formulario para agregar nuevo producto -->
                     <div class="col-sm-10 col-md-10 col-lg-6 col-12 addProduct">
                         <h1>Información del producto</h1>
                         <center>
+                            <!-- INICIO DE FORMULARIO -->
                             <form action="addProduct" id="myForm">
 
-                                <div class="form-group">
+                                <!-- Categoría -->
+                                <div>
                                     <label for="category">Categoría <span style="color:red">*</span></label>
                                     <select id="category" name="category">
                                         <option value="" selected></option>
@@ -50,13 +48,15 @@
                                     <small class="error"></small>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- Nombre del producto -->
+                                <div>
                                     <label for="name">Nombre del producto <span style="color:red">*</span></label>
                                     <input type="text" id="name" name="name">
                                     <small class="error"></small>
                                 </div>
 
-                                <div class="form-group">
+                                <!-- Descripción  -->
+                                <div>
                                     <label for="description">Descripción del producto <span
                                             style="color:red">*</span></label>
                                     <textarea type="description" id="description" name="description" rows="3"
@@ -66,12 +66,13 @@
 
                                 <div>
                                     <div class="row">
+                                        <!-- Precio del producto -->
                                         <div class="col-sm-12 col-md-5 col-lg-5 col-12">
                                             <label for="price">Precio <span style="color:red">*</span></label>
                                             <input type="number" id="price" name="price" min="0" step="1">
                                             <small class="error"></small>
                                         </div>
-
+                                        <!-- Selector de Temporada -->
                                         <div class="col-sm-12 col-md-5 col-lg-5 col-12">
                                             <label for="season">Temporada <span style="color:red">*</span></label>
                                             <select id="season" name="season">
@@ -88,18 +89,21 @@
                                 </div>
 
                                 <div>
-                                    <label for="comment">Comentario</label>
-                                    <input type="comment" id="comment" name="comment">
+                                    <label for="image">URL Imagen<span style="color:red">*</span></label>
+                                    <input type="url" id="image" name="image">
                                     <small class="error"></small>
                                 </div>
 
+                                <!-- Botón de envío de formulario -->
                                 <button id="enviar" type="submit" class="enviar" disabled>
                                     <strong>Enviar</strong>
                                 </button>
 
                             </form>
+                            <!-- FIN FORMULARIO -->
                         </center>
                     </div>
+
                 </div>
             </section>
         </div>
