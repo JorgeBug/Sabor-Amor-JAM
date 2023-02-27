@@ -5,6 +5,7 @@ const nameInput = document.getElementById('name');
 const description = document.getElementById('description');
 const price = document.getElementById('price');
 const season = document.getElementById('season');
+const spicy = document.getElementById('spicy');
 const image = document.getElementById('image');
 const enviarBtn = document.getElementById('enviar');
 
@@ -109,6 +110,7 @@ function storeProduct() {
         description: description.value.trim(),
         price: price.value.trim(),
         season: season.value,
+        spicy: spicy.value,
         imageURL: image.value
     };
 

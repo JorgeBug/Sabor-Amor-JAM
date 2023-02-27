@@ -44,6 +44,10 @@ select{
     font-size: 16px;
 }
 
+#spicy{
+    margin-bottom: 32.5px;
+}
+
 #description {
     text-align: left;
     background: rgba(255, 255, 255, 0.5);
