@@ -11,7 +11,7 @@ const enviarBtn = document.getElementById('enviar');
 // verificar campos al enviar formulario
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    checkAllInputs();
+    storeProduct(); //Llamada a la función para guardar en el localStorage
 });
 
 // expresiones regulares para validar campos
@@ -19,7 +19,6 @@ const selectRegex = /^.+$/;
 const nameRegex = /^.{5,}[a-zA-Z\s]+$/;
 const descriptionRegex = /^.{10,}$/;
 const priceRegex = /^\d+(\.\d{1,2})?$/;
-
 
 // validar campos en tiempo real
 category.addEventListener('input', () => {
@@ -51,19 +50,13 @@ season.addEventListener('input', () => {
 function validateInput(input, regex) {
     if (input.value.trim() === '') {
         setErrorForInput(input, "Es obligatorio completar el campo");
-       // input.nextElementSibling.innerText = 'Este campo es obligatorio';
-        //input.style.border = '2px solid #e74c3c';
         return false;
     }
     if (!regex.test(input.value.trim())) {
         setErrorForInput(input, "Ingrese un valor válido");
-        //input.nextElementSibling.innerText = 'Ingrese un valor válido';
-        //input.style.border = '2px solid #e74c3c';
         return false;
     }
     setSuccesFor(input);
-    //input.nextElementSibling.innerText = '';
-    //input.style.border = '4px solid #2eec71';
     return true;
 }
 
@@ -86,24 +79,46 @@ function setErrorForInput(input, message) {
     input.style.border = '3px solid #e74c3c'
     const formControl = input.parentElement;
     const small = formControl.querySelector("small");
-
     small.innerText = message;
 
     formControl.classList.add('error');
-
-    if(input === messagec){
-        formControl.classList.add("error");
-    }
 }
 
 //Muestra el mensaje de Correcto
-function setSuccesFor(input){
+function setSuccesFor(input) {
     input.style.border = '3px solid #2eec71';
     const formControl = input.parentElement;
-    formControl.classList.add('success');
-
     const small = formControl.querySelector("small");
     small.innerText = "";
+
     formControl.classList.remove('error');
 }
 
+// crear objeto en localStorage para almacenar productos
+if (!localStorage.getItem('products')) {
+    const products = { salsas: [], mermeladas: [] };
+    localStorage.setItem('products', JSON.stringify(products));
+}
+
+// función para almacenar producto en localStorage
+function storeProduct() {
+    const products = JSON.parse(localStorage.getItem('products'));
+    const newProduct = {
+        name: nameInput.value.trim(),
+        description: description.value.trim(),
+        price: price.value.trim(),
+        season: season.value
+    };
+    if (category.value === 'salsa') {
+        products.salsas.push(newProduct);
+        localStorage.setItem('products', JSON.stringify(products));
+    } else if (category.value === 'mermelada') {
+        products.mermeladas.push(newProduct);
+        localStorage.setItem('products', JSON.stringify(products));
+    }
+    checkAllInputs();
+    form.reset();
+    location.reload();
+
+    alert('Producto agregado!');
+}
