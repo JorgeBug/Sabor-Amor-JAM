@@ -50,17 +50,20 @@ season.addEventListener('input', () => {
 // función para validar campo y mostrar mensaje de error
 function validateInput(input, regex) {
     if (input.value.trim() === '') {
-        input.nextElementSibling.innerText = 'Este campo es obligatorio';
-        input.style.borderColor = 'red';
+        setErrorForInput(input, "Es obligatorio completar el campo");
+       // input.nextElementSibling.innerText = 'Este campo es obligatorio';
+        //input.style.border = '2px solid #e74c3c';
         return false;
     }
     if (!regex.test(input.value.trim())) {
-        input.nextElementSibling.innerText = 'Ingrese un valor válido';
-        input.style.borderColor = 'red';
+        setErrorForInput(input, "Ingrese un valor válido");
+        //input.nextElementSibling.innerText = 'Ingrese un valor válido';
+        //input.style.border = '2px solid #e74c3c';
         return false;
     }
-    input.nextElementSibling.innerText = '';
-    input.style.borderColor = 'green';
+    setSuccesFor(input);
+    //input.nextElementSibling.innerText = '';
+    //input.style.border = '4px solid #2eec71';
     return true;
 }
 
@@ -76,5 +79,31 @@ function checkAllInputs() {
     } else {
         enviarBtn.disabled = true;
     }
+}
+
+//Muestra el mensaje de Error
+function setErrorForInput(input, message) {
+    input.style.border = '3px solid #e74c3c'
+    const formControl = input.parentElement;
+    const small = formControl.querySelector("small");
+
+    small.innerText = message;
+
+    formControl.classList.add('error');
+
+    if(input === messagec){
+        formControl.classList.add("error");
+    }
+}
+
+//Muestra el mensaje de Correcto
+function setSuccesFor(input){
+    input.style.border = '3px solid #2eec71';
+    const formControl = input.parentElement;
+    formControl.classList.add('success');
+
+    const small = formControl.querySelector("small");
+    small.innerText = "";
+    formControl.classList.remove('error');
 }
 

@@ -45,7 +45,7 @@ select{
     background: rgba(255, 255, 255, 0.5);
     border: 2.5px solid #e7e7e7;
     border-radius: 28.5px;
-    margin-bottom: 32.5px;
+    margin-bottom: 35.5px;
     padding-left: 30px;
     width: 80%;
     font-family: 'Figtree', sans-serif;
@@ -81,25 +81,8 @@ select{
     text-align: center;
     margin-bottom: 32.5px;
 }
-
-.success input {
-    border-color: #2eec71;
-    
-  }
-
-  .success textarea {
-    border: 2px solid #2eec71;
-  }
-
-  .error input {
-    border: 2px solid #e74c3c;
-  }
-
-  .error textarea {
-    border: 2px solid #e74c3c;
-}
-
-.error small {
+  
+ .error small {
     color: #e74c3c;
     visibility: visible;
     padding-bottom: 0%;
@@ -111,14 +94,6 @@ select{
     font-family: 'Figtree', sans-serif;
     font-weight: 400;
     font-size: 13px;
-  }
-  
-  .form-container.error input {
-    border-color: #e74c3c;
-  }
+  } 
 
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-  }
+  
