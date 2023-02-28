@@ -2,94 +2,115 @@
     [
         {
             "name":"Aderezo Balsámico",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestro aderezo balsámico es una mezcla de vinagre balsámico, aceite de oliva, miel y especias, todo preparado a mano para brindar un sabor auténtico y fresco. Este aderezo es perfecto para ensaladas y para darle un toque especial a tus platillos favoritos, en especial con las ensaladas. ",
+            "price":95,
+            "spicy": "",
             "imgPath":"../assets/img/sauces/balsamico.png"
             
         },
         {
             "name":"Salsa Chilapeña",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra salsa chilapeña es una deliciosa mezcla de chiles secos, especias y aceite de oliva, todo molido a mano para brindar una textura suave y un sabor auténtico. Deliciosa combinación de sabores, hace de esta salsa agridulce un complemeto ideal para muchos alimentos. Su sabor picante con un toque de ahumado te llevará a un viaje por los sabores de México.",
+            "price":65,
+            "spicy": "1",
             "imgPath":"../assets/img/sauces/chilapena.png"
             
         },
         {
             "name":"Salsa de Chile de Árbol",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra salsa de chile de árbol es una mezcla de chiles secos, ajo y vinagre, todo preparado a mano para brindar un sabor auténtico y picante. Esta salsa es perfecta para acompañar platillos de carne y verduras. Su sabor intenso y picante hace que sea una salsa deliciosa y con carácter.",
+            "price":65,
+            "spicy": "3",
             "imgPath":"../assets/img/sauces/chile_de_arbol.png"
             
         },
         {
             "name":"Salsa de Chiltepín",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Si eres un amante del picante, nuestra salsa de chiltepin es perfecta para ti. Elaborada con chiles chiltepines, tomatillos y ajo, esta salsa tiene un sabor intenso y picante que te dejará sin aliento. Úsala para darle sabor a tus platillos y darles un sabor más intenso.",
+            "price":65,
+            "spicy": "2",
             "imgPath":"../assets/img/sauces/chiltepin.png"
             
         },
         {
-            "name":"Salsa de Habanero con Mango",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "name":"Salsa de Mango con Habanero",
+            "description":"Nuestra salsa de mango con habanero es una mezcla de mango fresco, chiles habaneros y especias. Esta salsa es perfecta para acompañar platillos de mariscos, pescados y carnes blancas. Su sabor equilibrado de dulce y picante hace que sea una salsa deliciosa y refrescante.",
+            "price":65,
+            "spicy": "2",
             "imgPath":"../assets/img/sauces/habanero_con_mango.png"
             
         },
         {
             "name":"Salsa Roja",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Un sabor completamente tradicional. Nuestra salsa roja es una salsa clásica y picante, elaborada con chiles secos y tomates. Perfecta para acompañar en cada una de tus comidas, esta salsa tiene un sabor auténtico y único que es perfecto para añadir un toque de sabor picante a tus platillos favoritos.",
+            "price":65,
+            "spicy": "1",
             "imgPath":"../assets/img/sauces/roja.png"
             
         },
         {
             "name":"Salsa de Tamarindo",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra salsa de tamarindo es una mezcla de tamarindo fresco y chiles morita, todos ellos cuidadosamente seleccionados y preparados a mano para brindar un sabor auténtico y picante. Su sabor agridulce es perfecto para maridar con platillos de carne y pescado.",
+            "price":65,
+            "spicy": "2",
             "imgPath":"../assets/img/sauces/tamarindo.png"
             
         },
         {
             "name":"Salsa Verde",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Una salsa de sabor tradicional,elaborada con tomatillos, chiles verdes, cebolla y cilantro, nuestra salsa verde es una salsa fresca y picante. Su sabor auténtico y su textura hacen que sea perfecta para acompañarte en casa comida o antojito.",
+            "price":65,
+            "spicy": "1",
             "imgPath":"../assets/img/sauces/verde.png"
         },
         {
             "name":"Salsa de Cacahuate",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra salsa de cacahuate es una mezcla de cacahuates tostados, chiles secos y especias, cuidadosamente seleccionados y preparados a mano para brindar un sabor auténtico y ligeramente picante. Esta salsa es perfecta para acompañar con todos tus platillos favoritos.",
+            "price":75,
+            "spicy": "2",
             "imgPath":"../assets/img/sauces/cacahuate.png"
         },
         {
-            "name":"Salsa de Chimichurri",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "name":"Chimichurri",
+            "description":"Nuestro chimichurri es una mezcla del sabor tradicional con nuestro delicioso toque, todo preparado a mano para brindar un sabor auténtico y fresco. Esta salsa es perfecta para acompañar carnes asadas, pollo y pescado. Su sabor equilibrado y su textura suave hacen que sea una salsa deliciosa y versátil.",
+            "price":65,
+            "spicy": "1",
             "imgPath":"../assets/img/sauces/chimichurri.png"
         },
         {
             "name":"Chipotles dulces",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestros deliciosos chipotles son elaborados con todo el amor y una mezcla de en una mezcla de miel y especias para que disfrutes de su delicioso y dulce sabor, te encantarán.",
+            "price":65,
+            "spicy": "1",
             "imgPath":"../assets/img/sauces/chipotles_p.png"
         }, 
         {
             "name":"Salsa Macha",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra salsa macha es una deliciosa mezcla de chiles secos, aceite de oliva y ajo, todo molido a mano para brindar una textura crujiente y un sabor auténtico. Esta salsa es perfecta para acompañar todo tipo de comida. Su sabor picante y ligeramente ahumado te encantará.",
+            "price":65,
+            "spicy": "2",
             "imgPath":"../assets/img/sauces/macha.png"
         },
         {
-            "name":"Salsa Macha Grande",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "name":"Salsa Macha Extra Picante",
+            "description":"Nuestra salsa macha extra picante es una deliciosa mezcla de chiles secos, aceite de oliva y ajo, todo molido a mano para brindar una textura crujiente y un sabor auténtico. Esta salsa es perfecta para aquellos que buscan un sabor picante intenso. Así que si disfrutas de un alto de picante ¡Cuidado, está se volverá tu favorita!",
+            "price":65,
+            "spicy": "3",
             "imgPath":"../assets/img/sauces/macha_grande.png"
         }, 
         {
-            "name":"Salsa Macha con Arandano Grande ",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "name":"Salsa Macha con Arandano",
+            "description":"Nuestra salsa macha con arándano es una deliciosa mezcla de chiles secos, arándanos secos, aceite de oliva y ajo, todo molido a mano para brindar una textura crujiente y un sabor auténtico. Esta salsa es perfecta para acompañar platillos de carnes, pescados y tacos. Su sabor picante con un toque agridulce de los arándanos te sorprenderá. ",
+            "price":65,
+            "spicy": "2",
             "imgPath":"../assets/img/sauces/macha_con_arandano_grande.png"
+        },
+        {
+            "name":"Salsa de Chile Morita",
+            "description":"Nuestra salsa de morita es una mezcla perfecta entre chiles morita tatemados, del tomate verde, ajo, cebolla y especias, cuidadosamente seleccionados y preparados a mano para brindar un sabor auténtico y picante. Su sabor es perfecto para llevar a tus chilaquiles a otro nivel. ",
+            "price":65,
+            "spicy": "3",
+            "imgPath":"../assets/img/sauces/chile_morita.png"
         }
 
     ],
@@ -98,66 +119,77 @@
             "name":"Mermelada de Fresa",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/fresa.png"
         },        
         {
             "name":"Mermelada de Fresa-Kiwi",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/fresa_kiwi.png"
         },        
         {
             "name":"Mermelada de Frutos Rojos",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/frutos_rojos.png"
         },        
         {
             "name":"Mermelada de Higo",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/higo.png"
         },        
         {
             "name":"Mermelada de Jamaica",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/jamaica.png"
         },        
         {
             "name":"Mermelada de Mango",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/mango.png"
         },        
         {
             "name":"Mermelada de Manzana",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/manzana.png"
         },        
         {
             "name":"Mermelada de Maracuyá",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/maracuya.png"
         },        
         {
             "name":"Mermelada de Piña",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/pina.png"
         },        
         {
             "name":"Mermelada de Pina y Chipotle",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/pina_chipotle.png"
         },        
         {
             "name":"Mermelada de Ponche de Frutas",
             "description":"Salsita pikosita y sabrosa",
             "price":580,
+            "spicy": "",
             "imgPath":"../assets/img/mermelades/ponche_de_frutas.png"
         } 
     ]
