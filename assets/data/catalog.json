@@ -33,7 +33,7 @@
             
         },
         {
-            "name":"Salsa de Mango con Habanero",
+            "name":"Salsa de Habanero con Mango",
             "description":"Nuestra salsa de mango con habanero es una mezcla de mango fresco, chiles habaneros y especias. Esta salsa es perfecta para acompañar platillos de mariscos, pescados y carnes blancas. Su sabor equilibrado de dulce y picante hace que sea una salsa deliciosa y refrescante.",
             "price":65,
             "spicy": "2",
@@ -62,6 +62,13 @@
             "price":65,
             "spicy": "1",
             "imgPath":"../assets/img/sauces/verde.png"
+        },
+        {
+            "name":"Salsa de Chile Morita",
+            "description":"Nuestra salsa de morita es una mezcla perfecta entre chiles morita tatemados, del tomate verde, ajo, cebolla y especias, cuidadosamente seleccionados y preparados a mano para brindar un sabor auténtico y picante. Su sabor es perfecto para llevar a tus chilaquiles a otro nivel. ",
+            "price":65,
+            "spicy": "3",
+            "imgPath":"../assets/img/sauces/chile_morita.png"
         },
         {
             "name":"Salsa de Cacahuate",
@@ -104,91 +111,84 @@
             "price":65,
             "spicy": "2",
             "imgPath":"../assets/img/sauces/macha_con_arandano_grande.png"
-        },
-        {
-            "name":"Salsa de Chile Morita",
-            "description":"Nuestra salsa de morita es una mezcla perfecta entre chiles morita tatemados, del tomate verde, ajo, cebolla y especias, cuidadosamente seleccionados y preparados a mano para brindar un sabor auténtico y picante. Su sabor es perfecto para llevar a tus chilaquiles a otro nivel. ",
-            "price":65,
-            "spicy": "3",
-            "imgPath":"../assets/img/sauces/chile_morita.png"
         }
 
     ],
     [
         {
             "name":"Mermelada de Fresa",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"La tradicional mermelada de fresa es una deliciosa mezcla de fresas frescas. Esta mermelada es perfecta para untar en pan tostado, galletas o para agregar a tus postres favoritos. El sabor dulce y fresco de las fresas te hará sentir como si estuvieras comiendo fruta recién cosechada de la huerta. ¡Disfrútala en cualquier momento del día!",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/fresa.png"
         },        
         {
             "name":"Mermelada de Fresa-Kiwi",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Si te gusta la mermelada de fresa, ¡tienes que probar nuestra mermelada fresa-kiwi! Esta mezcla única combina la dulzura de las fresas con el sabor tropical del kiwi para crear una mermelada única y deliciosa. Unta un poco de esta mermelada en una tostada o agrégala a un smoothie para darle un toque de sabor fresco. ¡Te aseguramos que te encantará!",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/fresa_kiwi.png"
         },        
         {
             "name":"Mermelada de Frutos Rojos",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra mermelada de frutos rojos está elaborada con una mezcla de fresas, frambuesas y moras, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico. Esta mermelada es perfecta para untar en pan tostado o para acompañar quesos y platillos salados. Su sabor dulce y agridulce con un toque de acidez te llevará a una experiencia de sabor única, deliciosa y además una de las favoritas",
+            "price":75,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/frutos_rojos.png"
         },        
         {
             "name":"Mermelada de Higo",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra mermelada de higo está elaborada con higos frescos y azúcar, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico. Esta mermelada es perfecta para untar en pan tostado o para acompañar quesos y carnes. Su sabor dulce y ligeramente terroso te encantará.",
+            "price":95,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/higo.png"
         },        
         {
             "name":"Mermelada de Jamaica",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Está elaborada con flor de jamaica y azúcar, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico. Esta mermelada es perfecta para untar en pan tostado o para acompañar quesos y platillos salados. Su sabor agridulce y floral te sorprenderá con cada bocado.",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/jamaica.png"
         },        
         {
             "name":"Mermelada de Mango",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra mermelada de mango está elaborada con mango fresco y azúcar, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico, con un toque de acidez. Esta mermelada es perfecta para untar en pan tostado o para acompañar quesos y carnes. Con cada bocado, te transportarás a un sabor tropical y dulce que te hará sentir como si estuvieras en las playas de México.",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/mango.png"
         },        
         {
             "name":"Mermelada de Manzana",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Con sabor de hogar nuestra mermelada de manzana es una mezcla deliciosa de manzanas frescas, azúcar y canela. Esta mermelada es perfecta para untar en pan tostado o para agregar a tus postres favoritos. El sabor cálido y reconfortante de la canela se mezcla perfectamente con el dulzor de las manzanas para crear una combinación única y deliciosa. ¡Te encantará en cualquier época del año!",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/manzana.png"
         },        
         {
             "name":"Mermelada de Maracuyá",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Con el sabor de la pasión, nuestra mermelada de maracuyá está elaborada con maracuyá fresco y azúcar, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico. Esta mermelada es perfecta para untar en pan tostado o para acompañar postres y helados. Su sabor agridulce y exótico te llevará a un viaje por los sabores de México.",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/maracuya.png"
         },        
         {
             "name":"Mermelada de Piña",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra mermelada de piña está elaborada con piña fresca y azúcar, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico. Esta mermelada es perfecta para untar en pan tostado o para acompañar carnes y platillos salados. Su sabor dulce y tropical te transportará a las playas de México con cada bocado.",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/pina.png"
         },        
         {
             "name":"Mermelada de Pina y Chipotle",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Nuestra mermelada de piña-chipotle está elaborada con piña fresca, chipotles y azúcar, todo cocido a fuego lento para brindar una textura suave y un sabor auténtico. Esta mermelada es perfecta para acompañar platillos de carnes, pescados y quesos. Su sabor agridulce con un toque de picante hará que tu paladar experimente una explosión de sabores.",
+            "price":65,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/pina_chipotle.png"
         },        
         {
             "name":"Mermelada de Ponche de Frutas",
-            "description":"Salsita pikosita y sabrosa",
-            "price":580,
+            "description":"Con sabor a navidad, nuestra mermelada de ponche de frutas, nos transporta a la mejor época del año. Elaborada con una mezcla de frutas de temporada, todo cocido a fuego lento con canela y azúcar para brindar un sabor único y delicioso. Esta mermelada es perfecta para untar en pan tostado o para acompañar postres y helados. Su sabor dulce y especiado te llevará a un viaje por los sabores de México.",
+            "price":75,
             "spicy": "",
             "imgPath":"../assets/img/mermelades/ponche_de_frutas.png"
         } 
