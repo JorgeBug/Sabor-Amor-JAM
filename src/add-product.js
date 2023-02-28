@@ -97,13 +97,13 @@ function setSuccesFor(input) {
 }
 
 // crear objeto en localStorage para almacenar productos
-if (!localStorage.getItem('products')) {
+/* if (!localStorage.getItem('products')) {
     const products = { salsas: [], mermeladas: [] };
     localStorage.setItem('products', JSON.stringify(products));
-}
+} */
 
 // función para almacenar producto en localStorage
-function storeProduct() {
+/* function storeProduct() {
     const products = JSON.parse(localStorage.getItem('products'));
     const newProduct = {
         name: nameInput.value.trim(),
@@ -126,4 +126,34 @@ function storeProduct() {
     location.reload();
 
     alert('Producto agregado!');
+} */
+
+// crear objeto en localStorage para almacenar productos
+if (!localStorage.getItem('products')) {
+    const products = { items: [] };
+    localStorage.setItem('products', JSON.stringify(products));
 }
+
+// función para almacenar producto en localStorage
+function storeProduct() {
+    const products = JSON.parse(localStorage.getItem('products'));
+    const newProduct = {
+        name: nameInput.value.trim(),
+        description: description.value.trim(),
+        price: price.value.trim(),
+        season: season.value,
+        spicy: spicy.value,
+        imageURL: image.value,
+        category: category.value
+    };
+
+    products.items.push(newProduct);
+    localStorage.setItem('products', JSON.stringify(products));
+    
+    checkAllInputs();
+    form.reset();
+    location.reload();
+
+    alert('Producto agregado!');
+}
+
