@@ -26,12 +26,12 @@ const createProductString = (imgPath, name, price, spicy) => {
         src="${imgPath}"
         alt=""
         />
-        
         <div class="hot-scale">
         ${hotScaleIcons}
         </div>
+        <center>
         <div class="description">
-        <center><h4 class="item-title">${name}</h4></center>
+        <h4 class="item-title">${name}</h4>
         <span>$${price} MXN</span>
         <button class="cart-button" 
         onclick="addToCart(event)"
@@ -42,8 +42,10 @@ const createProductString = (imgPath, name, price, spicy) => {
           Añadir
         </button>
         </div>
+        </center>
     </div>`;
 };
+
 
 const populateMainPageCatalog = () => {
   topProductSection = document.getElementById(topProductSection);
@@ -93,6 +95,7 @@ const populateCatalog = (SauceArray, sectionID) => {
     productSection.innerHTML += sauceHTML;
   }
 };
+
 
 //Regresa un arreglo de objetos JSON con la
 //informacion de las salsas mas populares

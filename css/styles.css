@@ -91,7 +91,7 @@ nav.navbar {
   right: 0;
 }
 
-span, h4.item-title{
+span.item-price, h4.item-title{
   font-family: 'Figtree', sans-serif;
   font-size: 20px;
 }

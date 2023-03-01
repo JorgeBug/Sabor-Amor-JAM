@@ -133,6 +133,8 @@ function deleteItem(event) {
 // Realizar pago
 function makePayment() {
   const itemsContainer = document.querySelector("#item-container");
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  console.log(checkoutBtn)
   while (itemsContainer.hasChildNodes()) {
     itemsContainer.removeChild(itemsContainer.firstChild);
   }

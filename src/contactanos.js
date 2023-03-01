@@ -9,6 +9,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     checkInputs();
+    redirect();
 })
 
 function checkInputs(){
@@ -115,3 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function redirect() {
+    window.location.href= 'http://127.0.0.1:5504/html/contactanos.html';
+}
