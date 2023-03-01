@@ -19,14 +19,52 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Script de navBar -->
-    <script src="../src/navbar.js"></script>
-
-    <!-- script de footer y carrito de compras  -->
-    <script defer src="../src/shopping-cart.js"></script>
     <!-- <script defer src="../src/footer.js"></script> -->
+
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="../css/descripcion.css" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- titulo de producto  -->
+    <h1 class="title">Mermelada de Ponche de Frutas</h1>
+
+    <div class="contaier" id="main-container">
+      <div class="row">
+        <!-- tarjeta de producto  -->
+        <div class="col-6" id="first">
+          <center>
+            <div class="card text-center border-0" style="width: 18rem">
+              <img
+                id="product-image"
+                src="../assets/img/mermelades/ponche_de_frutas.png"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <div class="card-body text-center border-0">
+                <a href="#" class="btn btn-primary btn-lg" id="add-btn"
+                  >ANADIR</a
+                >
+              </div>
+            </div>
+          </center>
+        </div>
+
+        <!-- Descripcion del producto  -->
+        <div class="col-6" id="second">
+          <h4 class="container-volume">250 ml</h4>
+          <h4 class="ingredients">
+            Ingredientes: <br />
+            guayaba, tejocote, manzana, tamarindo, piloncillo,<br />
+            ciruela pasa, jamaica, azúcar, canela, ácido cítrico.
+          </h4>
+          <h4>$70.00MXN</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script de navBar -->
+    <script src="../src/navbar.js"></script>
+    <script src="../src/footer.js"></script>
   </body>
 </html>
