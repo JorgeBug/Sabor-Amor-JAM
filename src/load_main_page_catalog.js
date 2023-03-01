@@ -32,7 +32,14 @@ const createProductString = (imgPath, name, price) => {
         <div class="description">
         <h4 class="item-title">${name}</h4>
         <span>$${price} MXN</span>
-        <button class="cart-button"><a href="#aver">+ Añadir</a></button>
+        <button class="cart-button" 
+        onclick="addToCart(event)"
+        data-name="${name}"
+        data-price="${price}"
+        data-img="${imgPath}"
+        id="add-btn">
+          Añadir
+        </button>
         </div>
     </div>`;
 };

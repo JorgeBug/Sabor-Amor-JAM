@@ -13,8 +13,13 @@ function addToCart(event) {
 
   const existingItemIndex = cart.findIndex((item) => item.name === productName);
   if (existingItemIndex !== -1) {
-    alert("El producto ya está en el carrito.");
-    return;
+    Swal.fire({
+      title: "Este producto ya está en el carrito",
+      icon: 'error',
+      confirmButtonColor: '#b40414',
+    })
+    refreshCartCounter();
+    return;  
   }
 
   const item = {
@@ -27,9 +32,21 @@ function addToCart(event) {
   cart.push(item);
 
   localStorage.setItem("data", JSON.stringify(cart));
+  addMessage(imagePath);
   refreshCartCounter();
   loadCartItems();
   refreshTotal();
+}
+
+function addMessage(url) {
+  Swal.fire({
+    title: "Agregado al carrito",
+    imageUrl: url,
+    imageWidth: '150px',
+    icon: 'success',
+    confirmButtonColor: '#b40414',
+  })
+
 }
 
 // Mostrar los items en el carrito
