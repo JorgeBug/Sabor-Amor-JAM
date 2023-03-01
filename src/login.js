@@ -3,8 +3,8 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const saveInfoBtn = document.getElementById("saveBtn").addEventListener("click", saveData);
 
-const storedEmail = "jorgeo.1225@gmail.com";
-const storedPassword = "123";
+const storedEmail = "jorge@gmail.com";
+const storedPassword = "holaMundo1";
 
 localStorage.setItem(storedEmail, storedPassword);
 
