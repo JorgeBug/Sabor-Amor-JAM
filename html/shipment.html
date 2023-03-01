@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/shipment.css" />
+    <script src="../src/navbar.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="shipment-details">
+      <div class="main-container">
+        <h3 class="pb-3">
+          Detalles de envío <i class="fa-solid fa-truck-fast"></i>
+        </h3>
+        <form action="" id="form">
+
+          <div class="user-name">
+            <input class="input" type="text" name="" id="name" placeholder="Nombre" />
+            <input class="input type="text" name="" id="lastname" placeholder="Apellido"
+            />
+          </div>
+          <div class="address-phone">
+            <input
+              class="input"
+              type="text"
+              name="adress"
+              id="address"
+              placeholder="Calle y número"
+            />
+            <input
+              class="input"
+              type="tel"
+              name=""
+              id="phone"
+              placeholder="Télefono"
+            />
+          </div>
+          <div class="subdivision-zip all" id="row3">
+            <div class="zipcode">
+              <input class="input" type="text" id="zipcode" placeholder="C.P" />
+              <button disabled class="button" id="btnSubmit">Validar C.P</button>
+            </div>
+          </div>
+          <div class="location-container"></div>
+          <button class="button btn-saveAddress" id="saveAddress">Guardar dirección <i class="fa-solid fa-map-pin"></i></button>
+          <button disabled class="button btn-checkout"
+            >Proceder a método de pago <i class="fa-regular fa-credit-card"></i
+          ></button>
+        </form>
+      </div>
+    </section>
+    <script src="../src/shipment.js"></script>
+  </body>
+</html>
