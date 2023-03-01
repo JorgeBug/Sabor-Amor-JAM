@@ -104,7 +104,7 @@ img {
   background-color: #ffc600;
   border: none;
   border-radius: 8px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 5px 15px;
   max-width: 250px;
 }
