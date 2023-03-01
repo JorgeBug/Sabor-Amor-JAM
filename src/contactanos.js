@@ -117,5 +117,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function redirect() {
-    window.location.href= 'http://127.0.0.1:5504/html/contactanos.html';
+    window.location.href= 'https://steady-longma-5c9fa1.netlify.app/html/contactanos.html';
 }
