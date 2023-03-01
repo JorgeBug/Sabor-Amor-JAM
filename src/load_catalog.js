@@ -18,7 +18,7 @@ async function loadFullCatalog() {
 
 const populateCatalog = (sauceArray, idString) => {
   for (let i = 0; i < sauceArray.length; i++) {
-    const card = createCardString(sauceArray[i].imgPath, sauceArray[i].name);
+    const card = createCardString(sauceArray[i].imgPath, sauceArray[i].name, sauceArray[i].price);
     addCard(card, idString);
   }
 };
@@ -28,24 +28,24 @@ const addCard = (cardString, idString) => {
   sauceRow.innerHTML += cardString;
 };
 
-const createCardString = (imgRoute, cardTitle) => {
+const createCardString = (imgRoute, cardTitle, cardPrice) => {
   return `
   <div class="col-sm">
   <div class="card text-center border-0" style="width: 18rem">
       <div class="image-container">
-        <i class="fa-regular fa-heart"></i>
+      <!--  <i class="fa-regular fa-heart"></i> -->
         <i class="fa-solid fa-pepper-hot"></i>
         <a href="#"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
       </div>
   </div>
     <div class="card-body">
       <h5 class="card-title">${cardTitle}</h5>
-      <h5 class="card-text">$70.00</h5>
+      <h5 class="card-text">$${cardPrice}</h5>
       <button
         onclick="addToCart(event)"
         class="btn btn-primary btn-lg border-0 btn-rounded"
         data-name="${cardTitle}"
-        data-price="70.00"
+        data-price="${cardPrice}"
         data-img="${imgRoute}"
         id="add-btn"
       >

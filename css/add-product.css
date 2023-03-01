@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+body {
+    background-color: #F0F4F7;
+}
+
+.main-container {
+    padding-top: 4%;
+}
+
+.section-product h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    padding-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+.section-product form label {
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    width: 80%;
+}
+
+.section-product form input,
+select{
+    background: rgba(255, 255, 255, 0.5);
+    border: 2.5px solid #e7e7e7;
+    border-radius: 28.5px;
+    height: 50px;
+    margin-bottom: 32.5px;
+    padding-left: 30px;
+    width: 80%;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#spicy{
+    margin-bottom: 32.5px;
+}
+
+#description {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2.5px solid #e7e7e7;
+    border-radius: 28.5px;
+    margin-bottom: 35.5px;
+    padding-left: 30px;
+    width: 80%;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#enviar{
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    width: 80%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    margin-top: 8%;
+    margin-bottom: 40px;
+    height: 50px;
+    color: #F0F4F7;
+}
+
+#enviar:enabled {
+    background-color: #4C87C2;
+    border: 3px solid #4C87C2;
+}
+
+#enviar:disabled {
+    background: #7ea8d2;
+    border: 3px solid #7ea8d2;
+}
+
+#price,
+#season,
+#category {
+    text-align: center;
+    margin-bottom: 32.5px;
+}
+  
+ .error small {
+    color: #e74c3c;
+    visibility: visible;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    margin-top: -35px;
+    margin-left: -130px;
+    max-height: 20px;
+    position: absolute;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+  } 
+
+  

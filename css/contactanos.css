@@ -5,10 +5,10 @@
 }
 
 .main-container {
-    padding-top: 160px;
+    padding-top: 140px;
 }
 
-h1.header {
+h1.header{
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     padding-bottom: 40px;
@@ -18,7 +18,7 @@ h1.header {
 #fnameid,
 #lnameid,
 #emailid,
-#phoneid {
+#phoneid{
     font-family: 'Figtree', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -26,15 +26,19 @@ h1.header {
     border: 2.5px solid #e7e7e7;
     border-radius: 28.5px;
     height: 55px;
+    width: 100%;
     margin-bottom: 32.5px;
 }
 
 #messageid {
     font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     background: rgba(255, 255, 255, 0.5);
     border: 2.5px solid #e7e7e7;
     border-radius: 28.5px;
     margin-bottom: 32.5px;
+    width: 100%;
 }
 
 .redes p {
@@ -47,30 +51,6 @@ div.redes{
     margin-top: 40px;
 }
 
-#sendData {
-    background: #4C87C2;
-    border: 3px solid #4C87C2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 30px;
-    border-radius: 28.5px;
-    width: 384px;
-    height: 55px;
-    border: none;
-    margin-bottom: 20px;
-}
-
-#name {
-    height: 55px;
-    left: 843px;
-}
-
-#lname,
-#email,
-#phone {
-    height: 55px;
-    left: 843px;
-}
-
 #message {
     height: 164px;
 }
@@ -78,3 +58,94 @@ div.redes{
 form{
     margin-bottom: 30px;
 }
+
+.message-error textarea {
+    border: 2px solid #b40414;
+}
+
+#sendData {
+    background: #4C87C2;
+    border: 3px solid #4C87C2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    border-radius: 28.5px;
+    width: 80%;
+    height: 55px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#lname,
+#email,
+#phone{
+    height: 55px;
+    left: 843px;
+}
+
+#messageid{
+    height: 164px;
+}
+
+span.required{
+    color: #b40414;
+}
+  
+.form-container {
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    position: relative;
+}
+  .form-container i {
+    position: absolute;
+    /*right: 120px;*/
+    margin-left: 145px;
+    margin-top: -53px;
+    visibility: hidden;
+  }
+
+  .success input {
+    border-color: #2eec71;
+    
+  }
+  
+  .success i.fa-circle-check {
+    visibility: visible;
+    color: #2eec71;
+  }
+
+  .success textarea {
+    border: 2px solid #2eec71;
+  }
+
+  .error input {
+    border: 2px solid #e74c3c;
+  }
+
+  .error textarea {
+    border: 2px solid #e74c3c;
+}
+
+  .error i.fa-circle-exclamation {
+    visibility: visible;
+    color: #e74c3c;
+    display: inline;
+  }
+  
+  .error small {
+    color: #e74c3c;
+    visibility: visible;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    margin-top: -35px;
+    margin-left: -130px;
+    max-height: 20px;
+    position: absolute;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  
+  .form-container.error input {
+    border-color: #e74c3c;
+  }
+  

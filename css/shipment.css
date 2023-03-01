@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+select,
+.input {
+  height: 45px;
+  min-width: 265px;
+  max-width: 400px;
+  border-radius: 28px;
+  outline: none;
+  border: 2px solid rgb(209, 186, 189);
+  text-align: center;
+  background-color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input.success {
+  border-color: #2eec71;
+}
+
+.input.error {
+  border-color: #e74c3c;
+}
+
+section.shipment-details {
+  margin-top: 120px;
+}
+
+.main-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+}
+
+.user-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.user-email {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 20px;
+}
+
+.subdivision-zip.all{
+  grid-template-columns: 1fr;
+}
+
+.location {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.location div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+#location,
+.subdivision-zip,
+.address-phone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.zipcode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 5px 15px;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+#btnSubmit {
+  background-color: #530412;
+  color: white;
+}
+
+.btn-checkout, .btn-saveAddress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #530412;
+}
+
+.btn-checkout i, .btn-saveAddress i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 768px) {
+  .user-name {
+    transition: all 0.5s ease;
+    grid-template-columns: 1fr;
+  }
+
+  .address-phone {
+    grid-template-columns: 1fr;
+    transition: all 0.5s ease;
+  }
+
+  .location div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+  }
+
+}

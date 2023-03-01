@@ -20,7 +20,7 @@ body {
 .fondo-inicio {
   background-image: linear-gradient(transparent 45%, #f0f4f7 70%), url(../assets/img/abouts-us/natural-ingredients.JPG);
   background-size: cover;
-  background-position: 30% 60%;
+  background-position: 30% 40%;
 }
 
 div.fondo-inicio {
