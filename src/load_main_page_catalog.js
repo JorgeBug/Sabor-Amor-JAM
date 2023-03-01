@@ -31,7 +31,7 @@ const createProductString = (imgPath, name, price, spicy) => {
         ${hotScaleIcons}
         </div>
         <div class="description">
-        <h4 class="item-title">${name}</h4>
+        <center><h4 class="item-title">${name}</h4></center>
         <span>$${price} MXN</span>
         <button class="cart-button"><a href="#aver"><strong> AÑADIR </strong></a></button>
         </div>
