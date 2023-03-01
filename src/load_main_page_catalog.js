@@ -14,24 +14,26 @@ mermeladas_mas_vendidas = [
   "Mermelada de Fresa",
 ];
 
-const createProductString = (imgPath, name, price) => {
+const createProductString = (imgPath, name, price, spicy) => {
+  /* Nivel de picante mostrado con iconos */
+  let hotScaleIcons = '';
+  for (let i = 0; i < spicy; i++) {
+    hotScaleIcons += '<i class="fa-solid fa-pepper-hot"></i>';
+  }
   return `<div class="pro">
         <img
         class="img-fluid"
         src="${imgPath}"
         alt=""
         />
-        <div class="fav-icon">
-        <a href="#"><i class="fa-regular fa-heart"></i></a>
-        </div>
+        
         <div class="hot-scale">
-        <i class="fa-solid fa-pepper-hot"></i>
-        <i class="fa-solid fa-pepper-hot"></i>
-        <i class="fa-solid fa-pepper-hot"></i>
+        ${hotScaleIcons}
         </div>
         <div class="description">
-        <h4 class="item-title">${name}</h4>
+        <center><h4 class="item-title">${name}</h4></center>
         <span>$${price} MXN</span>
+<<<<<<< HEAD
         <button class="cart-button" 
         onclick="addToCart(event)"
         data-name="${name}"
@@ -40,6 +42,9 @@ const createProductString = (imgPath, name, price) => {
         id="add-btn">
           Añadir
         </button>
+=======
+        <button class="cart-button"><a href="#aver"><strong> AÑADIR </strong></a></button>
+>>>>>>> main
         </div>
     </div>`;
 };
@@ -85,9 +90,10 @@ const populateCatalog = (SauceArray, sectionID) => {
   for (let i = 0; i < SauceArray.length; i++) {
     const name = SauceArray[i].name;
     const price = SauceArray[i].price;
+    const spicy = SauceArray[i].spicy;
     const imgPath = SauceArray[i].imgPath;
 
-    sauceHTML = createProductString(imgPath, name, price);
+    sauceHTML = createProductString(imgPath, name, price, spicy);
     productSection.innerHTML += sauceHTML;
   }
 };

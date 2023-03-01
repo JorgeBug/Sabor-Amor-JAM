@@ -44,6 +44,7 @@ main,
     border-radius: 28px;
     color: #3D4D4D;
     background-color: #FFC600;
+    font-weight: bold;
 }
 
 #selected {
