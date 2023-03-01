@@ -33,7 +33,6 @@ const createProductString = (imgPath, name, price, spicy) => {
         <div class="description">
         <center><h4 class="item-title">${name}</h4></center>
         <span>$${price} MXN</span>
-<<<<<<< HEAD
         <button class="cart-button" 
         onclick="addToCart(event)"
         data-name="${name}"
@@ -42,9 +41,6 @@ const createProductString = (imgPath, name, price, spicy) => {
         id="add-btn">
           Añadir
         </button>
-=======
-        <button class="cart-button"><a href="#aver"><strong> AÑADIR </strong></a></button>
->>>>>>> main
         </div>
     </div>`;
 };
