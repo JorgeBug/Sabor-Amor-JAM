@@ -124,7 +124,5 @@ function makePayment() {
   totalElement.innerText = `${0} MXN`;
   refreshTotal();
 
-  localStorage.removeItem("data");
-  window.location.replace("../html/shipment.html");
-
+  window.location.href = '../html/shipment.html';
 }
