@@ -33,14 +33,14 @@ const createCardString = (imgRoute, cardTitle, cardPrice) => {
   <div class="col-sm">
   <div class="card text-center border-0" style="width: 18rem">
       <div class="image-container">
-      <!--  <i class="fa-regular fa-heart"></i> -->
+       
         <i class="fa-solid fa-pepper-hot"></i>
         <a href="#"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
       </div>
   </div>
     <div class="card-body">
       <h5 class="card-title">${cardTitle}</h5>
-      <h5 class="card-text">$${cardPrice}</h5>
+      <h5 class="card-text"><strong>$${cardPrice} MXN</strong></h5>
       <button
         onclick="addToCart(event)"
         class="btn btn-primary btn-lg border-0 btn-rounded"
@@ -49,7 +49,7 @@ const createCardString = (imgRoute, cardTitle, cardPrice) => {
         data-img="${imgRoute}"
         id="add-btn"
       >
-        AÑADIR
+        <strong>AÑADIR</strong>
       </button>
     </div>
   </div>

@@ -20,7 +20,6 @@ const createProductString = (imgPath, name, price, spicy) => {
   for (let i = 0; i < spicy; i++) {
     hotScaleIcons += '<i class="fa-solid fa-pepper-hot"></i>';
   }
-
   return `<div class="pro">
         <img
         class="img-fluid"
@@ -34,7 +33,7 @@ const createProductString = (imgPath, name, price, spicy) => {
         <div class="description">
         <h4 class="item-title">${name}</h4>
         <span>$${price} MXN</span>
-        <button class="cart-button"><a href="#aver">+ Añadir</a></button>
+        <button class="cart-button"><a href="#aver"><strong> AÑADIR </strong></a></button>
         </div>
     </div>`;
 };
