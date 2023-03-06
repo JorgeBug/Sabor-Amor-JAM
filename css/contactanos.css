@@ -26,6 +26,7 @@
     font-family: "Roboto", sans-serif;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 28.5px;
+    height: 55px;
     margin-bottom: 32.5px;
 }
 
@@ -63,7 +64,8 @@
 }
 
 #messageid{
-    height: 164px;
+  height: 150px;
+  left: 843px;
 }
 
 span.required{
