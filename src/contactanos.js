@@ -9,7 +9,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   checkInputs();
-  showMessage();
 });
 
 function showMessage() {
@@ -17,6 +16,15 @@ function showMessage() {
     addMessage();
     setTimeout(() => {
       location.reload();
+    }, 1000);
+  }, 3000);
+}
+
+function sendForm() {
+  setTimeout(() => {
+    form.submit();
+    setTimeout(() => {
+      window.location.href = 'contactanos.html';
     }, 3000);
   }, 3000);
 }
@@ -85,10 +93,12 @@ function checkInputs() {
   }
 
   if (isValid) {
-    form.submit();
+    showMessage();
+    sendForm() 
+    
   }
 }
-
+  
 //Muestra el mensaje de Error
 function setErrorForInput(input, message) {
   const formControl = input.parentElement;
