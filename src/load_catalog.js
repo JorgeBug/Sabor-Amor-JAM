@@ -28,7 +28,8 @@ const populateCatalog = (sauceArray, idString) => {
     const card = createCardString(
       sauceArray[i].imgLink,
       sauceArray[i].nombre,
-      sauceArray[i].precio
+      sauceArray[i].precio,
+      sauceArray[i].spicy
     );
     addCard(card, idString);
   }
@@ -39,14 +40,19 @@ const addCard = (cardString, idString) => {
   sauceRow.innerHTML += cardString;
 };
 
-const createCardString = (imgRoute, cardTitle, cardPrice) => {
+const createCardString = (imgRoute, cardTitle, cardPrice, spicy) => {
+  /* Nivel de picante mostrado con iconos */
+  let hotScaleIcons = '';
+  for (let i = 0; i < spicy; i++) {
+    hotScaleIcons += '<i class="fa-solid fa-pepper-hot"></i>';
+  }
   return `
   <div class="col-sm">
   <div class="card text-center border-0" style="width: 18rem">
       <div class="image-container">
-        <i class="fa-solid fa-pepper-hot"></i>
         <a href="../html/descripcion.html" onclick="saveCardTitle(event, '${cardTitle}')"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
-      </div>
+        </div>
+        ${hotScaleIcons}
   </div>
     <div class="card-body">
       <h5 class="card-title">${cardTitle}</h5>
