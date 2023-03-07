@@ -145,3 +145,7 @@ function makePayment() {
 
   window.location.href = '../html/shipment.html';
 }
+
+function redirectOrders() {
+  window.location.href = "../html/pedidos.html"
+}
