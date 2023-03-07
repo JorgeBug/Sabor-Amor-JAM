@@ -37,9 +37,8 @@ const createCardString = (imgRoute, cardTitle, cardPrice) => {
   <div class="col-sm">
   <div class="card text-center border-0" style="width: 18rem">
       <div class="image-container">
-      <!--  <i class="fa-regular fa-heart"></i> -->
         <i class="fa-solid fa-pepper-hot"></i>
-        <a href="../html/descripcion.html"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
+        <a href="../html/descripcion.html" onclick="saveCardTitle(event, '${cardTitle}')"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
       </div>
   </div>
     <div class="card-body">
@@ -59,5 +58,11 @@ const createCardString = (imgRoute, cardTitle, cardPrice) => {
   </div>
 </div>`;
 };
+
+function saveCardTitle(event, title) {
+  event.preventDefault(); // detiene el comportamiento predeterminado del enlace
+  localStorage.setItem("cardTitle", title); // guarda el título de la tarjeta en el Local Storage con la clave "cardTitle"
+  window.location.href = "../html/descripcion.html"; // redirige al usuario a la página "descripcion.html"
+}
 
 loadFullCatalog();
