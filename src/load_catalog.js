@@ -3,25 +3,32 @@ const mermeladeSectionId = "mermelades-row";
 const jsonPath = "../assets/data/catalog.json";
 
 async function loadFullCatalog() {
-  fetch(jsonPath).then((response) =>
-    response
-      .json()
-      .then((data) => ({
-        data: data,
-      }))
-      .then((res) => {
-        populateCatalog(res.data[0], sauceSectionId);
-        populateCatalog(res.data[1], mermeladeSectionId);
-      })
-  );
+  fetch("https://sabor-amor.up.railway.app/api/catalogo")
+    .then((response) => response.json())
+    .then((data) => {
+      const sauces = getSauceOrMermeladeArray(data, "Salsa");
+      const mermelades = getSauceOrMermeladeArray(data, "Mermelada");
+      populateCatalog(sauces, sauceSectionId);
+      populateCatalog(mermelades, mermeladeSectionId);
+    });
 }
+
+const getSauceOrMermeladeArray = (productArray, category) => {
+  result = [];
+  for (let i = 0; i < productArray.length; i++) {
+    if (productArray[i].categoria === category) {
+      result.push(productArray[i]);
+    }
+  }
+  return result;
+};
 
 const populateCatalog = (sauceArray, idString) => {
   for (let i = 0; i < sauceArray.length; i++) {
     const card = createCardString(
-      sauceArray[i].imgPath,
-      sauceArray[i].name,
-      sauceArray[i].price
+      sauceArray[i].imgLink,
+      sauceArray[i].nombre,
+      sauceArray[i].precio
     );
     addCard(card, idString);
   }
