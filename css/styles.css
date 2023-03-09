@@ -211,7 +211,8 @@ a.nav-link:hover {
   z-index: -100;
 }
 
-#top-product-container img.img-fluid {
+#top-product-container img.img-fluid,
+#bottom-product-container img.img-fluid {
   transform: scale(0.9);
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
@@ -219,7 +220,8 @@ a.nav-link:hover {
   transition-property: all;
 }
 
-#top-product-container img.img-fluid:hover {
+#top-product-container img.img-fluid:hover,
+#bottom-product-container img.img-fluid:hover {
   transform: scale(1.0);
   cursor: pointer;
 }
