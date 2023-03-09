@@ -21,6 +21,7 @@ fetch("https://sabor-amor.up.railway.app/api/catalogo")
         document.querySelector("#add-btn").setAttribute("data-price", filteredData.precio);
         document.querySelector("#add-btn").setAttribute("data-img", filteredData.imgLink);
         document.querySelector("#add-btn").setAttribute("onclick","addToCart(event)");
+        //addEventListener("click", (event) => {console.log(event)});
         /*document.querySelector("#add-btn").addEventListener("click",addToCart())*/ /*() => {
             // acción al hacer clic en el botón "AÑADIR"
         });*/
