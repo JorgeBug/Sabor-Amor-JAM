@@ -16,7 +16,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   checkInputs();
-  showMessage();
 });
 
 
@@ -25,6 +24,15 @@ function showMessage() {
     addMessage();
     setTimeout(() => {
       location.reload();
+    }, 1000);
+  }, 3000);
+}
+
+function sendForm() {
+  setTimeout(() => {
+    form.submit();
+    setTimeout(() => {
+      window.location.href = 'contactanos.html';
     }, 3000);
   }, 3000);
 }
@@ -96,6 +104,7 @@ function checkInputs() {
     isMessageValid = true;
   }
 
+<<<<<<< HEAD
   if (
     isNameValid &&
     islnameValid &&
@@ -111,6 +120,15 @@ function checkInputs() {
 
 
 
+=======
+  if (isValid) {
+    showMessage();
+    sendForm() 
+    
+  }
+}
+  
+>>>>>>> 0e93f317ed1beae0dbaa137ddb793a2c122d26bd
 //Muestra el mensaje de Error
 function setErrorForInput(input, message) {
   const formControl = input.parentElement;

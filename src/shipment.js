@@ -185,7 +185,7 @@ const saveSelectedAddressInfo = () => {
 };
 
 const redirectPaymentPage = () => {
-  window.location.href = "https://steady-longma-5c9fa1.netlify.app/html/404";
+  window.location.href = "https://steady-longma-5c9fa1.netlify.app/html/paymentMethod.html";
 }
 
 saveAdressBtn.addEventListener("click", saveSelectedAddressInfo);

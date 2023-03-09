@@ -37,18 +37,29 @@ function createFooter() {
     instagramLogo.classList.add("fab", "fa-instagram");
     instagramLogo.style.fontSize = "35px";
     instagramLogo.style.margin = "30px";
-    
+    /* Icono Corazón*/
+    let heartLink = document.createElement("a");
+    heartLink.href = ""; //Poner la página de los deploys 
+    heartLink.target = "_blank";
+    let heartLogo = document.createElement("i");
+    heartLogo.classList.add("bi", "bi-heart-fill");
+    heartLogo.style.fontSize = "32px";
+    heartLogo.style.margin = "30px";
+    heartLink.style.marginTop = "7px";
+
     facebookLink.appendChild(facebookLogo);
     iconsContainer.appendChild(facebookLink);
     instagramLink.appendChild(instagramLogo);
     iconsContainer.appendChild(instagramLink);
+    heartLink.appendChild(heartLogo);
+    iconsContainer.appendChild(heartLink);
     /* Contenedor texto */
     let textContainer = document.createElement("div");
     textContainer.style.display = "flex";
     textContainer.style.justifyContent = "center";
     textContainer.style.alignItems = "center";
     textContainer.style.height = "20px";
-
+    
     var text = document.createElement("p");
     text.innerText = `Síguenos en nuestras redes sociales`;
     textContainer.appendChild(text);

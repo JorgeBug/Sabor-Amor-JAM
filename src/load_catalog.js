@@ -3,25 +3,33 @@ const mermeladeSectionId = "mermelades-row";
 const jsonPath = "../assets/data/catalog.json";
 
 async function loadFullCatalog() {
-  fetch(jsonPath).then((response) =>
-    response
-      .json()
-      .then((data) => ({
-        data: data,
-      }))
-      .then((res) => {
-        populateCatalog(res.data[0], sauceSectionId);
-        populateCatalog(res.data[1], mermeladeSectionId);
-      })
-  );
+  fetch("https://sabor-amor.up.railway.app/api/catalogo")
+    .then((response) => response.json())
+    .then((data) => {
+      const sauces = getSauceOrMermeladeArray(data, "Salsa");
+      const mermelades = getSauceOrMermeladeArray(data, "Mermelada");
+      populateCatalog(sauces, sauceSectionId);
+      populateCatalog(mermelades, mermeladeSectionId);
+    });
 }
+
+const getSauceOrMermeladeArray = (productArray, category) => {
+  result = [];
+  for (let i = 0; i < productArray.length; i++) {
+    if (productArray[i].categoria === category) {
+      result.push(productArray[i]);
+    }
+  }
+  return result;
+};
 
 const populateCatalog = (sauceArray, idString) => {
   for (let i = 0; i < sauceArray.length; i++) {
     const card = createCardString(
-      sauceArray[i].imgPath,
-      sauceArray[i].name,
-      sauceArray[i].price
+      sauceArray[i].imgLink,
+      sauceArray[i].nombre,
+      sauceArray[i].precio,
+      sauceArray[i].spicy
     );
     addCard(card, idString);
   }
@@ -32,15 +40,19 @@ const addCard = (cardString, idString) => {
   sauceRow.innerHTML += cardString;
 };
 
-const createCardString = (imgRoute, cardTitle, cardPrice) => {
+const createCardString = (imgRoute, cardTitle, cardPrice, spicy) => {
+  /* Nivel de picante mostrado con iconos */
+  let hotScaleIcons = '';
+  for (let i = 0; i < spicy; i++) {
+    hotScaleIcons += '<i class="fa-solid fa-pepper-hot"></i>';
+  }
   return `
   <div class="col-sm">
   <div class="card text-center border-0" style="width: 18rem">
       <div class="image-container">
-      <!--  <i class="fa-regular fa-heart"></i> -->
-        <i class="fa-solid fa-pepper-hot"></i>
-        <a href="../html/descripcion.html"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
-      </div>
+        <a href="../html/descripcion.html" onclick="saveCardTitle(event, '${cardTitle}')"><img src=${imgRoute} class="card-img-top" alt="..." /></a>
+        </div>
+        ${hotScaleIcons}
   </div>
     <div class="card-body">
       <h5 class="card-title">${cardTitle}</h5>
@@ -59,5 +71,11 @@ const createCardString = (imgRoute, cardTitle, cardPrice) => {
   </div>
 </div>`;
 };
+
+function saveCardTitle(event, title) {
+  event.preventDefault(); // detiene el comportamiento predeterminado del enlace
+  localStorage.setItem("cardTitle", title); // guarda el título de la tarjeta en el Local Storage con la clave "cardTitle"
+  window.location.href = "../html/descripcion.html"; // redirige al usuario a la página "descripcion.html"
+}
 
 loadFullCatalog();

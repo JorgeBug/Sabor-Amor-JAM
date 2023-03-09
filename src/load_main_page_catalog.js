@@ -21,11 +21,11 @@ const createProductString = (imgPath, name, price, spicy) => {
     hotScaleIcons += '<i class="fa-solid fa-pepper-hot"></i>';
   }
   return `<div class="pro">
-        <img
+        <a href="../html/descripcion.html" onclick="saveCardTitle(event, '${name}')"><img
         class="img-fluid"
         src="${imgPath}"
         alt=""
-        />
+        /></a>
         <div class="hot-scale">
         ${hotScaleIcons}
         </div>
@@ -111,3 +111,10 @@ const getMainProductArray = (salsas, productArray) => {
 };
 
 loadFullCatalog();
+
+//Guardar en el localStorage
+function saveCardTitle(event, title) {
+  event.preventDefault(); 
+  localStorage.setItem("cardTitle", title); // guarda el título de la tarjeta en el Local Storage con la clave "cardTitle"
+  window.location.href = "../html/descripcion.html"; // redirige al usuario a la página "descripcion.html"
+}

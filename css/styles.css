@@ -211,6 +211,21 @@ a.nav-link:hover {
   z-index: -100;
 }
 
+#top-product-container img.img-fluid,
+#bottom-product-container img.img-fluid {
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: all;
+}
+
+#top-product-container img.img-fluid:hover,
+#bottom-product-container img.img-fluid:hover {
+  transform: scale(1.0);
+  cursor: pointer;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 330px) and (max-width: 576px) {
   span.text-brand {

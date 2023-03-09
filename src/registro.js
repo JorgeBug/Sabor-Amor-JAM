@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
-const username = document.getElementById("name");
+const name = document.getElementById("name");
+const lastName = document.getElementById('lastName');
 const phone = document.getElementById("phone-num");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -8,6 +9,7 @@ const saveInfoBtn = document.getElementById("saveBtn");
 const checkbox = document.getElementById("check");
 
 const EMPTY_NAME_MSG = "El nombre no puede estar en blanco";
+const EMPTY_LASTNAME_MSG = "Los apellidos no pueden estar en blanco"
 const EMPTY_EMAIL_MSG = "El email no puede estar en blanco";
 const INVALID_EMAIL_MSG = "El email no es válido";
 const EMPTY_PASSWORD_MSG = "La contraseña no puede estar en blanco";
@@ -17,7 +19,9 @@ const EMPTY_PHONE_MSG = "El número de teléfono no puede estar en blanco";
 const INVALID_PHONE_MSG = "Ups, parece que no es un número válido";
 const PASSWORDMISMATCH_MSG = "Las contraseñas no coinciden";
 
-username.addEventListener("input", checkInputs);
+name.addEventListener("input", checkInputs);
+console.log(name)
+lastName.addEventListener("input", checkInputs);
 phone.addEventListener("input", checkInputs);
 email.addEventListener("input", checkInputs);
 password.addEventListener("input", checkInputs);
@@ -25,29 +29,75 @@ password2.addEventListener("input", checkInputs);
 checkbox.addEventListener("change", checkInputs);
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault(); // Evita que se refresque la página cuando se envía el formulario
 
-  checkInputs();
+  checkInputs(); // Ejecuta la función que valida los inputs
+
+  const nameValue = name.value.trim();
+  const lastnameValue = lastName.value.trim();
+  const phoneValue = phone.value.trim();
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
+
+  // Verifica que todos los campos estén completos
+  if (nameValue === "" || lastnameValue === "" || phoneValue === "" || emailValue === "" || passwordValue === "") {
+    alert("Por favor, complete todos los campos");
+    return;
+  }
+
+  // Crea un objeto con los datos a enviar al servidor
+  const data = {
+    nombre: nameValue,
+    apellido: lastnameValue,
+    contrasenia: passwordValue,
+    email: emailValue,
+    telefono: phoneValue
+  };
+
+  // Convierte el objeto a JSON para poder enviarlo en la solicitud
+  const datosJSON = JSON.stringify(data);
+
+  fetch("https://sabor-amor.up.railway.app/api/usuarios", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    mode: "cors",
+    body: datosJSON,
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
 });
 
+
 function checkInputs() {
-  const nameValue = username.value.trim();
+  const nameValue = name.value.trim();
+  const lastnameValue = lastName.value.trim();
   const phoneValue = phone.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
 
   let isNameValid = false;
+  let isLastNameValid = false;
   let isEmailValid = false;
   let isPasswordValid = false;
   let isPassword2Valid = false;
   let isPhoneValid = false;
 
   if (nameValue === "") {
-    setErrorFor(username, EMPTY_NAME_MSG);
+    setErrorFor(name, EMPTY_NAME_MSG);
   } else {
     isNameValid = true;
-    setSuccessFor(username);
+    setSuccessFor(name);
+  }
+
+  if (lastnameValue === "") {
+    setErrorFor(lastName, EMPTY_LASTNAME_MSG);
+  } else {
+    isLastNameValid = true;
+    setSuccessFor(lastName);
   }
 
   if (emailValue === "") {
@@ -90,6 +140,7 @@ function checkInputs() {
 
   if (
     isNameValid &&
+    isLastNameValid &&
     isEmailValid &&
     isPasswordValid &&
     isPassword2Valid &&
@@ -137,12 +188,29 @@ function validPhone(phone) {
 saveInfoBtn.addEventListener("click", saveData);
 
 function saveData() {
-  const nameValue = username.value.trim();
+  const nameValue = name.value.trim();
   const phoneValue = phone.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
   addUser(nameValue, phoneValue, emailValue, passwordValue);
+  showMessage();
+}
 
-  location.reload();
+function showMessage() {
+  setTimeout(() => {
+    addMessage();
+    setTimeout(() => {
+      window.location.href="https://steady-longma-5c9fa1.netlify.app/html/login.html"
+    }, 3000);
+  }, 3000);
+}
+
+
+function addMessage() {
+  Swal.fire({
+    title: "Registrado con éxito",
+    icon: "success",
+    confirmButtonColor: "#b40414",
+  });
 }

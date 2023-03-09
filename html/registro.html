@@ -40,9 +40,18 @@
           <form class="form" id="form">
             <div class="form-container">
               <label class="rounded-pill w-100"
-                >Nombre completo <span class="required">*</span>:</label
+                >Nombre(s) <span class="required">*</span>:</label
               >
-              <input type="text" id="name" placeholder="John Doe" />
+              <input type="text" id="name" placeholder="John" name="name" />
+              <i class="fa-solid fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <small>Error</small>
+            </div>
+            <div class="form-container">
+              <label class="rounded-pill w-100"
+                >Apellidos <span class="required">*</span>:</label
+              >
+              <input type="text" id="lastName" placeholder="Doe" name="lastName" />
               <i class="fa-solid fa-circle-check"></i>
               <i class="fa-solid fa-circle-exclamation"></i>
               <small>Error</small>
@@ -51,7 +60,7 @@
               <label class="rounded-pill w-100"
                 >Número de Teléfono <span class="required">*</span>:</label
               >
-              <input type="tel" id="phone-num" placeholder="55 455 232 23" />
+              <input type="tel" id="phone-num" placeholder="55 455 232 23" name="phone" />
               <i class="fa-solid fa-circle-check"></i>
               <i class="fa-solid fa-circle-exclamation"></i>
               <small>Error</small>
@@ -60,7 +69,7 @@
               <label class="rounded-pill w-100"
                 >Email <span class="required">*</span>:</label
               >
-              <input type="text" id="email" placeholder="johndoe15@email.com" />
+              <input type="text" id="email" placeholder="johndoe15@email.com" name="email" />
               <i class="fa-solid fa-circle-check"></i>
               <i class="fa-solid fa-circle-exclamation"></i>
               <small>Error</small>
@@ -69,7 +78,7 @@
               <label class="rounded-pill w-100"
                 >Contraseña <span class="required">*</span>:</label
               >
-              <input type="password" id="password" placeholder="*******" />
+              <input type="password" id="password" placeholder="*******" name="password" />
               <i class="fa-solid fa-circle-check"></i>
               <i class="fa-solid fa-circle-exclamation"></i>
               <small>Error</small>
@@ -130,6 +139,7 @@
     ></script>
     <script src="../src/navbar.js"></script>
     <script src="../src/usuarios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../src/registro.js"></script>
     <!--Footer js-->
     <script src="../src/footer.js"></script>
