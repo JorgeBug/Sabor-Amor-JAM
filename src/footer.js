@@ -43,9 +43,10 @@ function createFooter() {
     heartLink.target = "_blank";
     let heartLogo = document.createElement("i");
     heartLogo.classList.add("bi", "bi-heart-fill");
-    heartLogo.style.fontSize = "32px";
+    heartLogo.style.fontSize = "31px";
     heartLogo.style.margin = "30px";
-    
+    heartLink.style.marginTop = "3px";
+
     facebookLink.appendChild(facebookLogo);
     iconsContainer.appendChild(facebookLink);
     instagramLink.appendChild(instagramLogo);
