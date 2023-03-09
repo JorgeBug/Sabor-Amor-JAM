@@ -1,4 +1,5 @@
-// Inicialización del carrito
+
+
 const cart = JSON.parse(localStorage.getItem("data")) || [];
 const itemsContainer = document.querySelector("#item-container");
 if (itemsContainer) {
@@ -148,4 +149,16 @@ function makePayment() {
 
 function redirectOrders() {
   window.location.href = "../html/pedidos.html"
+}
+
+const userInfoInputs = document.getElementsByClassName('user');
+for(let i = 0; i < userInfoInputs.length; i++) {
+  let input = userInfoInputs[i];
+  input.addEventListener('click', function() {
+    input.style.borderColor = '#b40414';
+  })
+
+  input.addEventListener('blur', function() {
+    input.style.borderColor = ' #dcdfe2';
+  })
 }
