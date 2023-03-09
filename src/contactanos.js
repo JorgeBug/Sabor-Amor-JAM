@@ -4,6 +4,13 @@ const lastName = document.getElementById("lnameid");
 const email = document.getElementById("emailid");
 const phone = document.getElementById("phoneid");
 const messagec = document.getElementById("messageid");
+const saveInfoBtn = document.getElementById("saveBtn");
+
+fname.addEventListener("input", checkInputs);
+lastName.addEventListener("input", checkInputs);
+email.addEventListener("input", checkInputs);
+phone.addEventListener("input", checkInputs);
+messagec.addEventListener("input", checkInputs);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -11,6 +18,7 @@ form.addEventListener("submit", (e) => {
   checkInputs();
   showMessage();
 });
+
 
 function showMessage() {
   setTimeout(() => {
@@ -36,58 +44,72 @@ function checkInputs() {
   const emailContact = email.value.trim();
   const phoneContact = phone.value.trim();
   const messageContact = messagec.value.trim();
-  let isValid = true; //verifica que los campos sean válidos
-
+  //let isValid = true; //verifica que los campos sean válidos
+  
+  let isNameValid = false;
+  let islnameValid = false;
+  let isEmailValid = false;
+  let isPhoneValid = false;
+  let isMessageValid = false;
+  
   //validación Name
   if (fnameContact === "") {
     setErrorForInput(fname, "Es obligatorio completar el campo");
-    isValid = false;
   } else {
     setSuccesFor(fname);
+    isNameValid = true;
   }
 
   //Validación Last Name
   if (lnameContact === "") {
     setErrorForInput(lastName, "Es obligatorio completar el campo");
-    isValid = false;
   } else {
     setSuccesFor(lastName);
+    islnameValid = true;
   }
 
   //Validación Email
   if (emailContact === "") {
     setErrorForInput(email, "Es obligatorio completar el campo");
-    isValid = false;
   } else if (!isEmail(emailContact)) {
     setErrorForInput(email, "El email no es válido");
-    isValid = false;
   } else {
     setSuccesFor(email);
+    isEmailValid = true;
   }
 
   //Validación Teléfono
   if (phoneContact === "") {
     setErrorForInput(phone, "Es obligatorio completar el campo");
-    isValid = false;
   } else if (!validPhone(phoneContact)) {
     setErrorForInput(phone, "El teléfono no es valido");
-    isValid = false;
   } else {
     setSuccesFor(phone);
+    isPhoneValid = true;
   }
 
   //Validación Mensaje
   if (messageContact === "") {
     setErrorForInput(messagec, "Es obligatorio completar el campo");
-    isValid = false;
   } else {
     setSuccesFor(messagec);
+    isMessageValid = true;
   }
 
-  if (isValid) {
-    form.submit();
+  if (
+    isNameValid &&
+    islnameValid &&
+    isEmailValid &&
+    isPhoneValid &&
+    isMessageValid &&
+    checkbox.checked
+  ) {
+    saveInfoBtn.disabled = false;
   }
 }
+
+
+
 
 //Muestra el mensaje de Error
 function setErrorForInput(input, message) {
@@ -134,4 +156,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+saveInfoBtn.addEventListener("click", saveData);
 
+function saveData() {
+  const fnameContact = username.value.trim();
+  const lnameContact = phone.value.trim();
+  const emailContact = email.value.trim();
+  const phoneContact = password.value.trim();
+  const messageContact = password.value.trim();
+
+  addUser(fnameContact, lnameContact, emailContact, phoneContact, messageContact);
+
+  location.reload();
+}

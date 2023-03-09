@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+body {
+    background-color: #F0F4F7;
+}
+.resume-section{
+  padding-top: 15%;
+}
+.card-img-top {
+  width: 100px;
+  height: 100px;
+}
+.Stark{ 
+  background-color: #fff;
+  display: none;
+}
+.Stark:hover{
+  background-image: url("/assets/img/Equipo/Fondo\ nubes.svg");
+}
+.Stark h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #6F6CB8;
+}
+.Stark p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #E61050;
+}
+.dc{
+  width: 100px;
+  height: 100px;
+}
+.Deco{
+  background-image: url("/assets/img/Equipo/fondo_beigec.jpg");
+  
+}
+.Deco:hover{
+  background-image: url();
+}
+.Deco h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: ;
+}
+.Deco p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: ;
+}
+.los404{
+  color: #fff;
+  display: none;
+}
+.los404:hover{
+  background-color: #dd1a1a;
+}
+.los404 h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: black;
+}
+.los404 p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    color: #808080;
+}
+
+@media (min-width: 960px) {
+    .resume-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+@media only screen {
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+  
+    .resume-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
