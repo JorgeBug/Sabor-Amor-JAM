@@ -155,9 +155,13 @@ img {
   padding: 10px;
 }
 
-.city {
+.location {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.city label, .zip-code label {
+  padding-bottom: 10px;
 }
 
 .step-wizard {
