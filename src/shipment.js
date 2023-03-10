@@ -1,26 +1,16 @@
-const inputZIP = document.getElementById("zipcode");
+const inputZIP = document.getElementById("zip-code");
 const nameInput = document.getElementById("name");
 const lastnameInput = document.getElementById("lastname");
 const addressInput = document.getElementById("address");
 const phoneInput = document.getElementById("phone");
 const btnSubmit = document.getElementById("btnSubmit");
 const saveAdressBtn = document.getElementById("saveAddress");
-const goToCheckout = document.querySelector('.btn-checkout');
-console.log(goToCheckout)
-const locationContainer =
-  document.getElementsByClassName("location-container")[0];
-const locationInput = document.createElement("div");
-locationInput.classList.add("location");
-locationInput.innerHTML = `<div class="input" id="stateInput">
-<span id="state"></span>
-</div>
-<div class="input" id="cityInput">
-<span id="city"></span>
-</div>`;
+const goToCheckout = document.querySelector(".btn-checkout");
 let inputState;
 let inputCity;
 const selectSubdivision = document.createElement("select");
-const subAndZipContainer = document.getElementById("row3");
+const subAndZipContainer = document.getElementById("neighborhood-container");
+console.log(subAndZipContainer);
 
 nameInput.addEventListener("input", checkInputs);
 lastnameInput.addEventListener("input", checkInputs);
@@ -92,7 +82,7 @@ function checkInputs() {
     setSuccessFor(inputZIP);
   }
 
-  if(isZipValid) {
+  if (isZipValid) {
     btnSubmit.disabled = false;
   }
 
@@ -153,14 +143,13 @@ const show = (data) => {
 };
 
 const showLocationInfo = (data) => {
-
-  locationContainer.appendChild(locationInput);
   inputState = document.getElementById("state");
   inputCity = document.getElementById("city");
 
   inputState.innerHTML = data.estado;
   inputCity.innerHTML = data.ciudad;
   selectSubdivision.innerHTML = "";
+  selectSubdivision.classList.add("input");
   subAndZipContainer.appendChild(selectSubdivision);
 
   for (let i = 0; i < data.asentamiento.length; i++) {
@@ -182,12 +171,22 @@ const saveSelectedAddressInfo = () => {
   addressData.subdivision = selectSubdivision.value;
   addressData.address = addressInput.value;
   localStorage.setItem("addressData", JSON.stringify(addressData));
+  showAddressSaveMsg();
 };
 
 const redirectPaymentPage = () => {
-  window.location.href = "https://steady-longma-5c9fa1.netlify.app/html/paymentMethod.html";
+  window.location.href =
+    "https://steady-longma-5c9fa1.netlify.app/html/paymentMethod.html";
+};
+
+function showAddressSaveMsg() {
+  Swal.fire({
+    title: "Direccion guardada con éxito",
+    icon: "success",
+    confirmButtonColor: "#b40414",
+  });
 }
 
 saveAdressBtn.addEventListener("click", saveSelectedAddressInfo);
 selectSubdivision.addEventListener("change", saveSelectedAddressInfo);
-goToCheckout.addEventListener('click', redirectPaymentPage);
+goToCheckout.addEventListener("click", redirectPaymentPage);
