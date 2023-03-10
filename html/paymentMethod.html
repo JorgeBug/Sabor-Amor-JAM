@@ -1,168 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/shopping-cart.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="../css/paymentMethod.css" />
     <script src="../src/navbar.js"></script>
-    <title>SABOR AMOR | CARRITO</title>
   </head>
   <body>
-    <section class="main">
-      <div class="principal-container-left">
-        <div class="checkout">
-          <a href="https://steady-longma-5c9fa1.netlify.app/index.html">
-            <i class="fa-solid fa-arrow-left"></i>
-          </a>
-          <h2>Checkout</h2>
-        </div>
-        <section class="step-wizard">
-          <ul class="step-wizard-list">
-            <li class="step-wizard-item">
-              <span class="progress-count">1</span>
-              <span class="progress-label">Review Carrito</span>
-            </li>
-            <li class="step-wizard-item current-item">
-              <span class="progress-count">2</span>
-              <span class="progress-label">Detalles envío</span>
-            </li>
-            <li class="step-wizard-item">
-              <span class="progress-count">3</span>
-              <span class="progress-label">Método de pago</span>
-            </li>
-            <li class="step-wizard-item">
-              <span class="progress-count">4</span>
-              <span class="progress-label">Confirmación de pedido</span>
-            </li>
-          </ul>
-        </section>
-        <div class="progress-bar"></div>
-        <section class="user-info">
-          <h3 class="py-4">Información de Contacto</h3>
-          <form action="" id="form">
-            <div class="user-info-container">
-              <div class="user first-name">
-                <label for="firstname">Nombre</label>
-                <input type="text" id="name" class="user" placeholder="John" />
-              </div>
-              <div class="user last-name">
-                <label for="last-name">Apellidos</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  class="user"
-                  placeholder="Doe"
-                />
-              </div>
-              <div class="user email">
-                <label for="email">Email</label>
-                <input
-                  type="text"
-                  id="email"
-                  class="user"
-                  placeholder="example@email.com"
-                />
-              </div>
-              <div class="user phone">
-                <label for="phone">Teléfono</label>
-                <input
-                  type="text"
-                  id="phone"
-                  class="user"
-                  placeholder="55 5677 78 78"
-                />
-              </div>
-            </div>
-            <h3 class="py-4">
-              Detalles de envío <i class="fa-solid fa-truck-fast"></i>
-            </h3>
-            <div class="delievery-info-container">
-              <div class="user address">
-                <label for="address">Tu dirección</label>
-                <input
-                  type="text"
-                  id="address"
-                  class="user"
-                  placeholder="Calle y número"
-                />
-              </div>
-              <div class="user location">
-                <div class="zip-code">
-                  <label for="zip-code">Código Postal</label>
-                  <input
-                    type="text"
-                    id="zip-code"
-                    class="user"
-                    placeholder="CP"
-                  />
-                  <button id="btnSubmit">Validar CP</button>
-                </div>
-                <div class="state">
-                  <label for="state">Estado</label>
-                  <div class="input">
-                    <span id="state">Estado</span>
-                  </div>
-                </div>
-              </div>
-              <div class="user city">
-                <label for="city">Ciudad</label>
-                <div class="input">
-                  <span id="city">Ciudad</span>
-                </div>
-              </div>
-              <div class="user neighborhood" id="neighborhood-container">
-                <label for="neighborhood">Fraccionamiento</label>
-
-              </div>
-            </div>
-            <button id="saveAddress">
-              Guardar Dirección <i class="fa-solid fa-map-pin"></i>
-            </button>
-            <button disabled class="button btn-checkout">
-              Proceder a método de pago
-              <i class="fa-regular fa-credit-card"></i>
-            </button>
-          </form>
-        </section>
-      </div>
-
-      <div class="principal-container-right">
-        <h2>Tu pedido</h2>
-        <div class="cart-container">
-          <div id="item-container" class="list-items"></div>
-          <div class="checkout-container">
-            <div class="total">
-              <span>Total: $</span>
-              <span>0.00</span>
-            </div>
-            <button onclick="redirectOrders()" class="btn-yellow">
-              Ver mis pedidos
-            </button>
+    <center><h1>Agregar un método de pago</h1></center>
+    <center>
+      <div>
+        <form id="form">
+          <input
+            type="text"
+            id="cardnum"
+            name="cardnum"
+            placeholder="Número de tarjeta"
+          />
+          <div>
+            <br />
+            <input type="text" id="month" name="month" placeholder="Mes" />
+            <input type="text" id="year" name="year" placeholder="Año" />
           </div>
-        </div>
+
+          <div class="pt-3">
+            <input type="text" id="ccv" name="ccv" placeholder="CCV" />
+          </div>
+          <div class="pt-3">
+            <input
+              type="text"
+              id="owner"
+              name="owner"
+              placeholder="Titular de la tarjeta"
+            />
+          </div>
+          <div class="pt-3">
+            <input class="form" type="checkbox" id="check" checked />
+            <label class="form-check-label">Guardar método de pago</label>
+          </div>
+
+          <div>
+            <button id="button" type="submit">Agregar</button>
+          </div>
+        </form>
       </div>
-    </section>
-    <script defer src="../src/shopping-cart.js"></script>
-    <script src="../src/shipment.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </center>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="../src/footer.js"></script>
+    <script src="../src/paymentMethod.js"></script>
   </body>
 </html>
