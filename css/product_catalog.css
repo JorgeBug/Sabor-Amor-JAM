@@ -56,7 +56,7 @@ main,
 .fa-pepper-hot,
 .fa-heart {
     color: #B40414;
-    position: absolute;
+    position:absolute;
     font-size: 40px;
 }
 
@@ -72,9 +72,25 @@ main,
 /* card images  */
 .image-container {
     position: relative;
+    overflow: hidden;
+    background-color: transparent;
 }
 
-#sauces-row, #mermelades-row{
+#sauces-row,
+#mermelades-row {
     font-family: 'Figtree', sans-serif;
     font-weight: 700;
+}
+
+.card-img-top {
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.card-img-top:hover {
+    transform: scale(1.0);
+    cursor: pointer;
 }
