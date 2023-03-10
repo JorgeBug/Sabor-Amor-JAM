@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+body {
+    background-color: #F0F4F7;
+}
+.resume-section{
+  padding-top: 30%;
+  padding-bottom: 25%;
+}
+.card-img-top {
+  width: 100px;
+  height: 100px;
+}
+
+.Stark{ 
+  background-color: #fff;
+  display: none;
+}
+.Stark:hover{
+  background-image: url("/assets/img/Equipo/Fondo\ nubes.svg");
+}
+.Stark h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #6F6CB8;
+}
+.Stark p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    color: #E61050;
+}
+
+.dc{
+  width: 100px;
+  height: 100px;
+}
+.Deco{
+  background-color: #fff;
+  display: none;
+}
+.Deco:hover{
+  background-image: url("/assets/img/Equipo/descarga.png");
+}
+.Deco h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #e8e7e3;
+}
+.Deco p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    color: rgb(52, 58, 54);
+}
+
+.los404{
+  background-image: url("/assets/img/Equipo/descarga\ \(1\).png");
+  background-size: 100% 100%;
+  display: none;
+  height: 280px;
+}
+.los404 h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #eee8aa;
+}
+.los404 p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    color:#ababab;
+}
+
+.Nilaik{ 
+  background-color: #fff;
+  display: none;
+  height: 210px;
+}
+.Nilaik:hover{
+  background-image: url("/assets/img/Equipo/gradient-background-with-light-blue-and-purple-blends-free-vector.webp");
+  background-size: 100% 100%;
+}
+.Nilaik h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #f6d522;
+}
+.Nilaik p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 18px;
+    color: #4f1f28;
+}
+
+.Obsi{ 
+  background-color: #fff;
+  display: none;
+  height: 230px;
+}
+.Obsi:hover{
+  background-color: #CFB9AD;
+}
+.Obsi h3 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color: #76879F;
+}
+.Obsi p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    color: #A48676;
+}
+
+@media (min-width: 960px) {
+    .resume-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+@media only screen {
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+  
+    .resume-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
