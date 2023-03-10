@@ -32,72 +32,114 @@
         </div>
         <section class="step-wizard">
           <ul class="step-wizard-list">
-              <li class="step-wizard-item">
-                  <span class="progress-count">1</span>
-                  <span class="progress-label">Review Carrito</span>
-              </li>
-              <li class="step-wizard-item current-item">
-                  <span class="progress-count">2</span>
-                  <span class="progress-label">Detalles envío</span>
-              </li>
-              <li class="step-wizard-item">
-                  <span class="progress-count">3</span>
-                  <span class="progress-label">Método de pago</span>
-              </li>
-              <li class="step-wizard-item">
-                  <span class="progress-count">4</span>
-                  <span class="progress-label">Confirmación de pedido</span>
-              </li>
+            <li class="step-wizard-item">
+              <span class="progress-count">1</span>
+              <span class="progress-label">Review Carrito</span>
+            </li>
+            <li class="step-wizard-item current-item">
+              <span class="progress-count">2</span>
+              <span class="progress-label">Detalles envío</span>
+            </li>
+            <li class="step-wizard-item">
+              <span class="progress-count">3</span>
+              <span class="progress-label">Método de pago</span>
+            </li>
+            <li class="step-wizard-item">
+              <span class="progress-count">4</span>
+              <span class="progress-label">Confirmación de pedido</span>
+            </li>
           </ul>
-      </section>
+        </section>
         <div class="progress-bar"></div>
         <section class="user-info">
-          <h3 class="pt-4">Información de Contacto</h3>
-          <div class="user-info-container">
-            <div class="user first-name">
-              <label for="firstname">Nombre</label>
-              <input type="text" id="name" class="user" placeholder="John">
-            </div>
-            <div class="user last-name">
-              <label for="last-name">Apellidos</label>
-              <input type="text" id="lastname" class="user" placeholder="Doe">
-            </div>
-            <div class="user email">
-              <label for="email">Email</label>
-              <input type="text" id="email" class="user" placeholder="example@email.com">
-            </div>
-            <div class="user phone">
-              <label for="phone">Teléfono</label>
-              <input type="text" id="phone" class="user" placeholder="55 5677 78 78">
-            </div>
-          </div>
-          <h3 class="pt-4">Detalles de envío <i class="fa-solid fa-truck-fast"></i></h3>
-          <div class="delievery-info-container">
-            <div class="user address">
-              <label for="address">Tu dirección</label>
-              <input type="text" id="address" class="user" placeholder="Calle y número">
-            </div>
-            <div class="user location">
-              <div class="zip-code">
-                <label for="last-name">Código Postal</label>
-                <input type="text" id="lastname" class="user" placeholder="CP">
+          <h3 class="py-4">Información de Contacto</h3>
+          <form action="" id="form">
+            <div class="user-info-container">
+              <div class="user first-name">
+                <label for="firstname">Nombre</label>
+                <input type="text" id="name" class="user" placeholder="John" />
               </div>
-              <div class="city">
-                <label for="last-name">Ciudad</label>
-                <input type="text" id="lastname" class="user" placeholder="Ciudad">
+              <div class="user last-name">
+                <label for="last-name">Apellidos</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  class="user"
+                  placeholder="Doe"
+                />
+              </div>
+              <div class="user email">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  class="user"
+                  placeholder="example@email.com"
+                />
+              </div>
+              <div class="user phone">
+                <label for="phone">Teléfono</label>
+                <input
+                  type="text"
+                  id="phone"
+                  class="user"
+                  placeholder="55 5677 78 78"
+                />
               </div>
             </div>
-            <div class="user email">
-              <label for="email">Email</label>
-              <input type="text" id="email" class="user" placeholder="example@email.com">
+            <h3 class="py-4">
+              Detalles de envío <i class="fa-solid fa-truck-fast"></i>
+            </h3>
+            <div class="delievery-info-container">
+              <div class="user address">
+                <label for="address">Tu dirección</label>
+                <input
+                  type="text"
+                  id="address"
+                  class="user"
+                  placeholder="Calle y número"
+                />
+              </div>
+              <div class="user location">
+                <div class="zip-code">
+                  <label for="zip-code">Código Postal</label>
+                  <input
+                    type="text"
+                    id="zip-code"
+                    class="user"
+                    placeholder="CP"
+                  />
+                  <button id="btnSubmit">Validar CP</button>
+                </div>
+                <div class="state">
+                  <label for="state">Estado</label>
+                  <div class="input">
+                    <span id="state">Estado</span>
+                  </div>
+                </div>
+              </div>
+              <div class="user city">
+                <label for="city">Ciudad</label>
+                <div class="input">
+                  <span id="city">Ciudad</span>
+                </div>
+              </div>
+              <div class="user neighborhood" id="neighborhood-container">
+                <label for="neighborhood">Fraccionamiento</label>
+
+              </div>
             </div>
-            <div class="user phone">
-              <label for="phone">Teléfono</label>
-              <input type="text" id="phone" class="user" placeholder="55 5677 78 78">
-            </div>
-          </div>
+            <button id="saveAddress">
+              Guardar Dirección <i class="fa-solid fa-map-pin"></i>
+            </button>
+            <button disabled class="button btn-checkout">
+              Proceder a método de pago
+              <i class="fa-regular fa-credit-card"></i>
+            </button>
+          </form>
         </section>
       </div>
+
       <div class="principal-container-right">
         <h2>Tu pedido</h2>
         <div class="cart-container">
@@ -107,9 +149,6 @@
               <span>Total: $</span>
               <span>0.00</span>
             </div>
-            <button onclick="makePayment()" id="checkoutBtn">
-              Proceder a método de pago
-            </button>
             <button onclick="redirectOrders()" class="btn-yellow">
               Ver mis pedidos
             </button>
@@ -118,6 +157,8 @@
       </div>
     </section>
     <script defer src="../src/shopping-cart.js"></script>
+    <script src="../src/shipment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
