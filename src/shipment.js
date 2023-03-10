@@ -135,7 +135,7 @@ function getZipCode() {
 
 async function loadAddressInfo() {
   const cp = getZipCode();
-  const token = "c86c9904-69f1-4517-b63a-3a15b5d872f0";
+  const token = "71427c6b-fedd-4ea2-8d7a-2aa8c4eb5a8f";
   const url = `https://api.copomex.com/query/info_cp/${cp}?type=simplified&token=${token}`;
 
   fetch(url)
